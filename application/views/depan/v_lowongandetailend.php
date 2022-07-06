@@ -1,0 +1,279 @@
+<!-- Job Section End -->
+<section class="job-style-two pt-100 pb-70">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>Jobs You May Be Interested In</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="job-card-two">
+                    <div class="row align-items-center">
+                        <div class="col-md-1">
+                            <div class="company-logo">
+                                <a href="job-details.html">
+                                    <img src="<?php echo base_url() ?>asset/img/company-logo/1.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="job-info">
+                                <h3>
+                                    <a href="#">Web Designer, Graphic Designer, UI/UX Designer </a>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        Graphics Designer
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        $35000-$38000
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-location-plus'></i>
+                                        Wellesley Rd, London
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-stopwatch'></i>
+                                        9 days ago
+                                    </li>
+                                </ul>
+
+                                <span>Full Time</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="theme-btn text-end">
+                                <a href="#" class="default-btn">
+                                    Browse Job
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="job-card-two">
+                    <div class="row align-items-center">
+                        <div class="col-md-1">
+                            <div class="company-logo">
+                                <a href="job-details.html">
+                                    <img src="<?php echo base_url() ?>asset/img/company-logo/2.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="job-info">
+                                <h3>
+                                    <a href="#">Website Developer & Software Developer</a>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        Web Developer
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        $3000-$8000
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-location-plus'></i>
+                                        Garden Road, UK
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-stopwatch'></i>
+                                        5 days ago
+                                    </li>
+                                </ul>
+
+                                <span>Full Time</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="theme-btn text-end">
+                                <a href="#" class="default-btn">
+                                    Browse Job
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="job-card-two">
+                    <div class="row align-items-center">
+                        <div class="col-md-1">
+                            <div class="company-logo">
+                                <a href="job-details.html">
+                                    <img src="<?php echo base_url() ?>asset/img/company-logo/3.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="job-info">
+                                <h3>
+                                    <a href="#">Application Developer & Web Designer</a>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        App Developer
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        $3000-$4000
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-location-plus'></i>
+                                        State City, USA
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-stopwatch'></i>
+                                        8 days ago
+                                    </li>
+                                </ul>
+
+                                <span>Part-Time</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="theme-btn text-end">
+                                <a href="#" class="default-btn">
+                                    Browse Job
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="job-card-two">
+                    <div class="row align-items-center">
+                        <div class="col-md-1">
+                            <div class="company-logo">
+                                <a href="job-details.html">
+                                    <img src="<?php echo base_url() ?>asset/img/company-logo/4.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="job-info">
+                                <h3>
+                                    <a href="#">Frontend & Backend Developer</a>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        Web Developer
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        $5000-$8000
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-location-plus'></i>
+                                        Drive Post NY 676
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-stopwatch'></i>
+                                        1 days ago
+                                    </li>
+                                </ul>
+
+                                <span>Full Time</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="theme-btn text-end">
+                                <a href="#" class="default-btn">
+                                    Browse Job
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-12">
+                <div class="job-card-two">
+                    <div class="row align-items-center">
+                        <div class="col-md-1">
+                            <div class="company-logo">
+                                <a href="job-details.html">
+                                    <img src="<?php echo base_url() ?>asset/img/company-logo/5.png" alt="logo">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="job-info">
+                                <h3>
+                                    <a href="#">IT Department & Manager</a>
+                                </h3>
+                                <ul>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        Manager
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-briefcase'></i>
+                                        $35000-$38000
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-location-plus'></i>
+                                        Wellesley Rd, London
+                                    </li>
+                                    <li>
+                                        <i class='bx bx-stopwatch'></i>
+                                        7 days ago
+                                    </li>
+                                </ul>
+
+                                <span>Full Time</span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="theme-btn text-end">
+                                <a href="#" class="default-btn">
+                                    Browse Job
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Job Section End -->
+
+<!-- Subscribe Section Start -->
+<section class="subscribe-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="section-title">
+                    <h2>Get New Job Notifications</h2>
+                    <p>Subscribe & get all related jobs notification</p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <form class="newsletter-form" data-toggle="validator">
+                    <input type="email" class="form-control" placeholder="Enter your email" name="EMAIL" required autocomplete="off">
+
+                    <button class="default-btn sub-btn" type="submit">
+                        Subscribe
+                    </button>
+
+                    <div id="validator-newsletter" class="form-result"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Subscribe Section End -->
