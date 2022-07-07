@@ -1,229 +1,148 @@
-<!-- HEADER
-			============================================= -->
-<header id="header" class="header white-menu navbar-dark">
-    <div class="header-wrapper">
+<!--  HEADER STYLE 04 -->
 
+<!--  HEADER STYLE  02-->
 
-        <!-- MOBILE HEADER -->
-        <div class="wsmobileheader clearfix">
-            <a id="wsnavtoggle" class="wsanimated-arrow"><span></span></a>
-            <span class="smllogo smllogo-black"><img src="<?php echo base_url() ?>website/images/logo.png" width="172" height="40" alt="mobile-logo" /></span>
-            <span class="smllogo smllogo-white"><img src="<?php echo base_url() ?>website/images/logo-white.png" width="172" height="40" alt="mobile-logo" /></span>
-        </div>
+<header class="main-header clearfix" data-sticky_header="true">
 
+    <div class="top-bar">
 
-        <!-- NAVIGATION MENU -->
-        <div class="wsmainfull menu clearfix">
-            <div class="wsmainwp clearfix">
+        <div class="container">
 
+            <div class="row">
 
-                <!-- LOGO IMAGE -->
-                <!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 344 x 80 pixels) -->
-                <div class="desktoplogo"><a href="#hero-3" class="logo-black"><img src="<?php echo base_url() ?>website/images/logo.png" width="172" height="40" alt="header-logo"></a></div>
-                <div class="desktoplogo"><a href="d#hero-3" class="logo-white"><img src="<?php echo base_url() ?>website/images/logo-white.png" width="172" height="40" alt="header-logo"></a></div>
+                <div class="col-lg-6 col-md-6 col-sm-12">
 
-
-                <!-- MAIN MENU -->
-                <nav class="wsmenu clearfix">
-                    <ul class="wsmenu-list">
-
-
-                        <!-- SIMPLE NAVIGATION LINK -->
-                        <li class="nl-simple" aria-haspopup="true"><a href="#">About</a></li>
-
-
-                        <!-- DROPDOWN MENU -->
-                        <li aria-haspopup="true"><a href="#">Pages <span class="wsarrow"></span></a>
-                            <div class="wsmegamenu clearfix halfmenu">
-                                <div class="container-fluid">
-                                    <div class="row">
-
-                                        <!-- Links -->
-                                        <ul class="col-lg-6 col-md-12 col-xs-12 link-list left-link-list">
-                                            <li><a href="about.html">About Us Page</a></li>
-                                            <li><a href="categories-list.html">Categories Listing</a></li>
-                                            <li><a href="category-details.html">Category Details</a></li>
-                                            <li><a href="courses-list.html">Courses Listing</a></li>
-                                            <li><a href="course-details.html">Course Details</a></li>
-                                            <li><a href="teachers-list.html">Teachers Listing</a></li>
-                                            <li><a href="teacher-profile.html">Teacher Profile</a></li>
-                                        </ul>
-
-                                        <!-- Links -->
-                                        <ul class="col-lg-6 col-md-12 col-xs-12 link-list">
-                                            <li><a href="become-a-teacher.html">Become A Teacher</a></li>
-                                            <li><a href="pricing.html">Pricing Plans Page</a></li>
-                                            <li><a href="reviews.html">Reviews Page</a></li>
-                                            <li><a href="faqs.html">FAQs Page</a></li>
-                                            <li><a href="blog-listing.html">Blog Listing</a></li>
-                                            <li><a href="single-post.html">Single Post</a></li>
-                                            <li><a href="contacts.html">Contacts Page</a></li>
-                                        </ul>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li> <!-- END DROPDOWN MENU -->
-
-
-                        <!-- DROPDOWN MENU -->
-                        <li aria-haspopup="true"><a href="#">Categories <span class="wsarrow"></span></a>
-                            <ul class="sub-menu">
-                                <li aria-haspopup="true"><a href="courses-list.html">Development</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">Finance & Accounting</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">IT & Software</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">Office Productivity</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">Photography</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">Math & Science</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">Languages</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">Marketing</a></li>
-                                <li aria-haspopup="true"><a href="courses-list.html">Health & Fitness</a></li>
-                            </ul>
-                        </li> <!-- END DROPDOWN MENU -->
-
-
-                        <!-- MEGAMENU -->
-                        <li aria-haspopup="true"><a href="#">Mega Menu <span class="wsarrow"></span></a>
-                            <div class="wsmegamenu clearfix">
-                                <div class="container">
-                                    <div class="row">
-
-
-                                        <!-- MEGAMENU QUICK LINKS -->
-                                        <div class="col-md-12 col-lg-3">
-
-                                            <!-- Title -->
-                                            <h3 class="title">Top 5 Online Courses:</h3>
-
-                                            <ul class="link-list clearfix">
-                                                <li><a href="course-details.html">English for Tourism</a></li>
-                                                <li><a href="course-details.html">Python Programming - Working with Lists and Files</a></li>
-                                                <li><a href="course-details.html">Computer Networking - Wired and Wireless Networks</a></li>
-                                                <li><a href="course-details.html">Digital Marketing: The Ultimate Guide to Strategic</a></li>
-                                                <li><a href="course-details.html">The Complete iOS 10 & Swift 3 Developer Course</a></li>
-                                            </ul>
-
-                                        </div> <!-- END MEGAMENU QUICK LINKS -->
-
-
-                                        <!-- MEGAMENU FEATURED NEWS -->
-                                        <div class="col-md-12 col-lg-5">
-
-                                            <!-- Title -->
-                                            <h3 class="title">Featured News:</h3>
-
-                                            <!-- Image -->
-                                            <div class="fluid-width-video-wrapper mb-15"><img src="<?php echo base_url() ?>website/images/blog/featured-news.jpg" alt="featured-news" /></div>
-
-                                            <!-- Text -->
-                                            <h5 class="h5-md">
-                                                <a href="single-post.html">Study smart and save time with these 5 tips
-                                                </a>
-                                            </h5>
-                                            <p class="wsmwnutxt">Porta semper lacus cursus, feugiat primis ultrice in ligula risus auctor
-                                                tempus feugiat dolor impedit magna...
-                                            </p>
-
-                                        </div> <!-- END MEGAMENU FEATURED NEWS -->
-
-
-                                        <!-- MEGAMENU LATEST NEWS -->
-                                        <div class="col-md-12 col-lg-4">
-
-                                            <!-- Title -->
-                                            <h3 class="title">Latest News:</h3>
-
-                                            <!-- Latest News -->
-                                            <ul class="latest-news">
-
-                                                <!-- Post #1 -->
-                                                <li class="clearfix d-flex align-items-center">
-
-                                                    <!-- Image -->
-                                                    <img class="img-fluid" src="<?php echo base_url() ?>website/images/blog/latest-post-1.jpg" alt="blog-post-preview" />
-
-                                                    <!-- Text -->
-                                                    <div class="post-summary">
-                                                        <a href="single-post.html">Etiam sapien risus ante auctor tempus an accumsan...</a>
-                                                        <p>18 hours ago</p>
-                                                    </div>
-
-                                                </li>
-
-                                                <!-- Post #2 -->
-                                                <li class="clearfix d-flex align-items-center">
-
-                                                    <!-- Image -->
-                                                    <img class="img-fluid" src="<?php echo base_url() ?>website/images/blog/latest-post-2.jpg" alt="blog-post-preview" />
-
-                                                    <!-- Text -->
-                                                    <div class="post-summary">
-                                                        <a href="single-post.html">Blandit tempor sapien ipsum, porta risus auctor justo...
-                                                        </a>
-                                                        <p>Feb 17, 2020</p>
-                                                    </div>
-
-                                                </li>
-
-                                                <!-- Post #3 -->
-                                                <li class="clearfix d-flex align-items-center">
-
-                                                    <!-- Image -->
-                                                    <img class="img-fluid" src="<?php echo base_url() ?>website/images/blog/latest-post-3.jpg" alt="blog-post-preview" />
-
-                                                    <!-- Text -->
-                                                    <div class="post-summary">
-                                                        <a href="single-post.html">Cursus risus an auctor risus laoreet undo auctor varius...</a>
-                                                        <p>Feb 07, 2020</p>
-                                                    </div>
-
-                                                </li>
-                                            </ul>
-                                        </div> <!-- END MEGAMENU LATEST NEWS -->
-
-
-                                    </div> <!-- End row -->
-                                </div> <!-- End container -->
-                            </div> <!-- End wsmegamenu -->
-                        </li> <!-- END MEGAMENU -->
-
-
-                        <!-- SIMPLE NAVIGATION LINK -->
-                        <li class="nl-simple" aria-haspopup="true"><a href="blog-listing.html">Blog</a></li>
-
-
-                        <!-- SIMPLE NAVIGATION LINK -->
-                        <li class="nl-simple" aria-haspopup="true"><a href="contacts.html">Contacts</a></li>
-
-
-                        <!-- DROPDOWN MENU -->
-                        <li aria-haspopup="true">
-                            <a href="#" class="lang-select">
-                                <img src="<?php echo base_url() ?>website/images/icons/flags/uk.png" alt="flag-icon" /> En <span class="wsarrow"></span>
-                            </a>
-                            <ul class="sub-menu last-sub-menu">
-                                <li aria-haspopup="true"><a href="#"><img src="<?php echo base_url() ?>website/images/icons/flags/germany.png" alt="flag-icon" /> Deutch</a></li>
-                                <li aria-haspopup="true"><a href="#"><img src="<?php echo base_url() ?>website/images/icons/flags/spain.png" alt="flag-icon" /> Español</a></li>
-                                <li aria-haspopup="true"><a href="#"><img src="<?php echo base_url() ?>website/images/icons/flags/france.png" alt="flag-icon" /> Français</a></li>
-                                <li aria-haspopup="true"><a href="#"><img src="<?php echo base_url() ?>website/images/icons/flags/italy.png" alt="flag-icon" /> Italiano</a></li>
-                                <li aria-haspopup="true"><a href="#"><img src="<?php echo base_url() ?>website/images/icons/flags/russia.png" alt="flag-icon" /> Русский</a></li>
-                                <li aria-haspopup="true"><a href="#"><img src="<?php echo base_url() ?>website/images/icons/flags/china.png" alt="flag-icon" /> 简体中文</a></li>
-                            </ul>
-                        </li> <!-- END DROPDOWN MENU -->
-
-
-                        <!-- HEADER BUTTON 
-								    <li class="nl-simple" aria-haspopup="true">
-								    	<a href="#" class="btn btn-rose tra-black-hover last-link">Get Started</a>
-								    </li> -->
-
-
+                    <ul class="top-bar-info clearfix  text-left">
+                        <li><span class="fa fa-envelope-o text-primary-color"></span> &nbsp; info@your-domain.com</li>
+                        <li><span class="fa fa-support text-primary-color"></span> &nbsp; +880-1911623458</li>
                     </ul>
-                </nav> <!-- END MAIN MENU -->
+
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <div class="top-bar-social square-layout text-dark-color text-right">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                    </div>
+                </div>
+
 
             </div>
-        </div> <!-- END NAVIGATION MENU -->
+
+        </div> <!--  end .container -->
+
+    </div> <!--  end .top-bar  -->
+
+    <section class="header-wrapper navgiation-wrapper">
+
+        <div class="navbar navbar-default">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="logo" href="<?php echo base_url('depan') ?>"><img alt="" src="<?php echo base_url('assets/img/') . $this->db->query("select * from tbl_perusahaan")->row()->logo_depan ?>"></a>
+                </div>
+
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="drop">
+                            <a href="<?php echo base_url('depan') ?>" title="Home Layout 01">Home</a>
+
+                        </li>
+                        <li>
+                            <a href="#" title="About Us">Tentang Kami</a>
+                        </li>
+
+                        <li class="drop">
+                            <a href="#">Pages</a>
+                            <ul class="drop-down">
+                                <li class="drop">
+                                    <a href="service.html" title="Services">Services</a>
+                                    <ul class="drop-down level3">
+                                        <li><a href="service-details.html">Services Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="drop">
+                                    <a href="team.html" title="Team">Our Team</a>
+                                    <ul class="drop-down level3">
+                                        <li><a href="single-team.html">Single Team</a></li>
+                                    </ul>
+                                </li>
+                                <li class="drop">
+                                    <a href="#">Gallery</a>
+                                    <ul class="drop-down level3">
+                                        <li><a href="gallery-1.html">Layout 01</a></li>
+                                        <li><a href="gallery-2.html">Layout 02</a></li>
+                                        <li><a href="gallery-3.html">Layout 03</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="drop">
+                                    <a href="#">Elements 01</a>
+                                    <ul class="drop-down level3">
+
+                                        <li><a href="element-info-box.html">Info Boxes</a></li>
+                                        <li><a href="element-feedback.html">Testimonials</a></li>
+                                        <li><a href="appointment.html" title="APPOINTMENT">APPOINTMENT</a></li>
+                                        <li><a href="faq.html" title="FAQ">FAQ</a></li>
+                                        <li><a href="coming-soon.html" title="COMING SOON">COMING SOON</a></li>
+                                        <li><a href="404.html" title="404 Page">404 Page</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="drop">
+                                    <a href="#">Elements 02</a>
+                                    <ul class="drop-down level3">
+                                        <li><a href="element-cta.html">CTA Boxes</a></li>
+                                        <li><a href="element-counter.html">Counters</a></li>
+                                        <li><a href="element-logos.html">Logos/Client</a></li>
+                                        <li><a href="element-pricing-table.html">Pricing Table</a></li>
+                                        <li><a href="element-service.html">Service Boxes</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="drop">
+                                    <a href="#">Elements 03</a>
+                                    <ul class="drop-down level3">
+                                        <li><a href="element-highlights.html">Highlights</a></li>
+                                        <li><a href="element-appointment.html">Quote Form</a></li>
+                                        <li><a href="element-team.html">Team Boxes</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="drop"><a href="#">Level 3</a>
+                                    <ul class="drop-down level3">
+                                        <li><a href="#">Level 3.1</a></li>
+                                        <li><a href="#">Level 3.2</a></li>
+                                        <li><a href="#">Level 3.3</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="drop">
+                            <a href="#">Blog</a>
+                            <ul class="drop-down">
+                                <li><a href="blog.html">All Posts</a></li>
+                                <li><a href="single.html">Single Page</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="appointment.html" class="nav-btn-highlight">Get Free Quote</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </section>
 
 
-    </div> <!-- End header-wrapper -->
-</header> <!-- END HEADER -->
+</header> <!-- end main-header  -->

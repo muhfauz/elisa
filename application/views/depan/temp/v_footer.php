@@ -1,205 +1,178 @@
- <!-- FOOTER-2
-			============================================= -->
- <footer id="footer-2" class="footer division">
-     <div class="container">
+  <!-- START FOOTER  -->
+
+  <footer class="section-pure-black-bg">
+
+      <section class="footer-widget-area footer-widget-area-bg section-custom-bg" data-bg_img="images/footer_bg.jpg" data-bg_color="#111111" data-bg_opacity="0.8">
+
+          <div class="container">
+
+              <div class="row">
 
 
-         <!-- FOOTER CONTENT -->
-         <div class="row">
+                  <div class="col-md-4 col-sm-12 col-xs-12">
+
+                      <div class="footer-widget">
+
+                          <div class="sidebar-widget-wrapper">
+
+                              <div class="textwidget about-footer">
+
+                                  <div class="footer-widget-header clearfix">
+                                      <h3>ABOUT AQUA SHATAR</h3>
+                                  </div> <!--  end .footer-widget-header -->
+
+                                  <div class="footer-about-text margin-top-16">
+                                      Aqua Shatar offers professional swim training services at our retail locations throughout town.
+                                      The high level of customer service has allowed to open multiple full-service swim centers.
+                                  </div>
 
 
-             <!-- FOOTER INFO -->
-             <div class="col-md-5 col-lg-5 col-xl-4">
-                 <div class="footer-info mb-40">
+                                  <div class="social-icons margin-top-24">
 
-                     <!-- Footer Logo -->
-                     <!-- For Retina Ready displays take a image with double the amount of pixels that your image will be displayed (e.g 344 x 80 pixels) -->
-                     <img src="<?php echo base_url() ?>website/images/logo.png" width="172" height="40" alt="footer-logo">
+                                      <a href="#">
+                                          <i class="fa fa-facebook"></i>
+                                      </a>
 
-                     <!-- Text -->
-                     <p>Aliquam orci a nullam tempor sapien gravida donec enim ipsum porta justo velna an auctor
-                         undo congue magna laoreet augue sapien
-                     </p>
+                                      <a href="#">
+                                          <i class="fa fa-twitter"></i>
+                                      </a>
 
-                 </div>
-             </div>
+                                      <a href="#">
+                                          <i class="fa fa-pinterest-p"></i>
+                                      </a>
 
+                                      <a href="#">
+                                          <i class="fa fa-instagram"></i>
+                                      </a>
 
-             <!-- FOOTER PRODUCTS LINKS -->
-             <div class="col-md-3 col-lg-3 col-xl-2">
-                 <div class="footer-links mb-40">
+                                      <a href="#">
+                                          <i class="fa fa-linkedin"></i>
+                                      </a>
 
-                     <!-- Title -->
-                     <h5 class="h5-md">Quick Links</h5>
+                                  </div>
 
-                     <!-- Footer Links -->
-                     <ul class="foo-links clearfix">
-                         <li><a href="about.html">About eTreeks</a></li>
-                         <li><a href="categories-list.html">Courses Catalog</a></li>
-                         <li><a href="reviews.html">Our Testimonials</a></li>
-                         <li><a href="pricing.html">Premium Learning</a></li>
-                         <li><a href="blog-listing.html">From the Blog</a></li>
-                     </ul>
+                              </div>
 
-                 </div>
-             </div>
+                          </div> <!-- end .footer-widget-wrapper  -->
 
+                      </div> <!--  end .footer-widget  -->
 
-             <!-- FOOTER COMPANY LINKS -->
-             <div class="col-md-4 col-lg-4 col-xl-3">
-                 <div class="footer-links mb-40">
+                  </div> <!--  end .col-md-4 col-sm-12 -->
 
-                     <!-- Title -->
-                     <h5 class="h5-md">Popular Categories</h5>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
 
-                     <!-- Footer Links -->
-                     <ul class="clearfix">
-                         <li><a href="#">Business English</a></li>
-                         <li><a href="#">Software Development</a></li>
-                         <li><a href="#">Finance & Accounting</a></li>
-                         <li><a href="#">Health and Fitness</a></li>
-                         <li><a href="#">Office Productivity</a></li>
-                     </ul>
+                      <div class="footer-widget">
 
-                 </div>
-             </div>
+                          <div class="sidebar-widget-wrapper">
+
+                              <div class="footer-widget-header clearfix">
+                                  <h3>CONTACT US</h3>
+                              </div> <!--  end .footer-widget-header -->
 
 
-             <!-- FOOTER NEWSLETTER FORM -->
-             <div class="col-md-7 col-xl-3">
-                 <div class="footer-form mb-20">
+                              <div class="textwidget">
 
-                     <!-- Title -->
-                     <h5 class="h5-md">Stay in Touch</h5>
+                                  <i class="fa fa-envelope-o fa-contact"></i>
+                                  <p><a href="#">support-us@swimes.com</a><br /><a href="#">helpmenow@swimes.com</a></p>
 
-                     <!-- Newsletter Form Input -->
-                     <form class="newsletter-form">
+                                  <i class="fa fa-location-arrow fa-contact"></i>
+                                  <p>Road-2,3/A East Shibgonj<br />Sylhet-3100, Bangladesh</p>
 
-                         <div class="input-group">
-                             <input type="email" autocomplete="off" class="form-control" placeholder="Your Email Address" required id="s-email">
-                             <span class="input-group-btn">
-                                 <button type="submit" class="btn btn-rose tra-rose-hover">Subscribe</button>
-                             </span>
-                         </div>
+                                  <i class="fa fa-phone fa-contact"></i>
+                                  <p>Office:&nbsp; (+880) 0823 560 433<br />Cell:&nbsp; (+880) 0723 161 343</p>
 
-                         <!-- Newsletter Form Notification -->
-                         <label for="s-email" class="form-notification"></label>
+                              </div>
 
-                     </form>
+                          </div> <!-- end .footer-widget-wrapper  -->
 
-                 </div>
-             </div> <!-- END FOOTER NEWSLETTER FORM -->
+                      </div> <!--  end .footer-widget  -->
+
+                  </div> <!--  end .col-md-4 col-sm-12 -->
 
 
-         </div> <!-- END FOOTER CONTENT -->
+                  <div class="col-md-4 col-sm-6 col-xs-12">
 
+                      <div class="footer-widget">
 
-         <!-- BOTTOM FOOTER -->
-         <div class="bottom-footer">
-             <div class="row">
+                          <div class="sidebar-widget-wrapper">
 
+                              <div class="footer-widget-header clearfix">
+                                  <h3>OPENING HOURS</h3>
+                              </div> <!--  end .footer-widget-header -->
 
-                 <!-- FOOTER COPYRIGHT -->
-                 <div class="col-lg-8">
-                     <ul class="bottom-footer-list">
-                         <li>
-                             <p>&copy; Copyright eTreeks 2020</p>
-                         </li>
-                         <li>
-                             <p><a href="tel:123456789">508.746.9892</a></p>
-                         </li>
-                         <li>
-                             <p class="last-li"><a href="mailto:yourdomain@mail.com">hello@domain.com</a></p>
-                         </li>
-                     </ul>
-                 </div>
+                              <div class="textwidget">
+                                  <ul class="opening-shedule">
+                                      <li class="clearfix">
+                                          <span> Sat - Tues : </span>
+                                          <div class="pull-right"> 6.00 AM - 10.00 PM</div>
+                                      </li>
+                                      <li>
+                                          <span> Wed - Thurs : </span>
+                                          <div class="pull-right"> 8.00 AM - 6.00 PM</div>
+                                      </li>
+                                      <li>
+                                          <span> Friday :</span>
+                                          <div class="pull-right"> 6.00 AM - 10.00 PM</div>
+                                      </li>
+                                      <li>
+                                          <span> Sunday :</span>
+                                          <div class="pull-right"> Closed</div>
+                                      </li>
+                                  </ul>
 
-
-                 <!-- FOOTER SOCIALS LINKS -->
-                 <div class="col-lg-4 text-right">
-                     <ul class="foo-socials text-center clearfix">
-
-                         <li><a href="#" class="ico-facebook"><i class="fab fa-facebook-f"></i></a></li>
-                         <li><a href="#" class="ico-twitter"><i class="fab fa-twitter"></i></a></li>
-                         <li><a href="#" class="ico-google-plus"><i class="fab fa-google-plus-g"></i></a></li>
-                         <li><a href="#" class="ico-tumblr"><i class="fab fa-tumblr"></i></a></li>
-
-                         <!--
-									<li><a href="#" class="ico-behance"><i class="fab fa-behance"></i></a></li>	
-									<li><a href="#" class="ico-dribbble"><i class="fab fa-dribbble"></i></a></li>									
-									<li><a href="#" class="ico-instagram"><i class="fab fa-instagram"></i></a></li>	
-									<li><a href="#" class="ico-linkedin"><i class="fab fa-linkedin-in"></i></a></li>
-									<li><a href="#" class="ico-pinterest"><i class="fab fa-pinterest-p"></i></a></li>								
-									<li><a href="#" class="ico-youtube"><i class="fab fa-youtube"></i></a></li>										
-									<li><a href="#" class="ico-vk"><i class="fab fa-vk"></i></a></li>
-									<li><a href="#" class="ico-yelp"><i class="fab fa-yelp"></i></a></li>
-									<li><a href="#" class="ico-yahoo"><i class="fab fa-yahoo"></i></a></li>
-								    -->
-
-                     </ul>
-                 </div>
-
-
-             </div>
-         </div> <!-- END BOTTOM FOOTER -->
-
-
-     </div> <!-- End container -->
- </footer> <!-- END FOOTER-2 -->
+                              </div>
 
 
 
+                          </div> <!-- end .footer-widget-wrapper  -->
 
- </div> <!-- END PAGE CONTENT -->
+                      </div> <!--  end .footer-widget  -->
 
-
-
-
- <!-- EXTERNAL SCRIPTS
-		============================================= -->
- <script src="<?php echo base_url() ?>website/js/jquery-3.3.1.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/bootstrap.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/modernizr.custom.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.easing.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.appear.js"></script>
- <script src="<?php echo base_url() ?>website/js/menu.js"></script>
- <script src="<?php echo base_url() ?>website/js/materialize.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.scrollto.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.countdown.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/imagesloaded.pkgd.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/isotope.pkgd.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.flexslider.js"></script>
- <script src="<?php echo base_url() ?>website/js/owl.carousel.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.magnific-popup.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/register-form.js"></script>
- <script src="<?php echo base_url() ?>website/js/comment-form.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.validate.min.js"></script>
- <script src="<?php echo base_url() ?>website/js/jquery.ajaxchimp.min.js"></script>
-
- <!-- Custom Script -->
- <script src="<?php echo base_url() ?>website/js/custom.js"></script>
-
- <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
- <!-- [if lt IE 9]>
-			<script src="<?php echo base_url() ?>website/js/html5shiv.js" type="text/javascript"></script>
-			<script src="<?php echo base_url() ?>website/js/respond.min.js" type="text/javascript"></script>
-		<![endif] -->
-
- <!-- Google Analytics: Change UA-XXXXX-X to be your site's ID. Go to http://www.google.com/analytics/ for more information. -->
- <!--
-		<script>
-			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-			ga('create', 'UA-XXXXX-Y', 'auto');
-			ga('send', 'pageview');
-		</script>
-		<script async src='https://www.google-analytics.com/analytics.js'></script>
-		-->
- <!-- End Google Analytics -->
+                  </div>
 
 
+              </div> <!-- end row  -->
 
- </body>
+          </div> <!-- end .container  -->
 
+      </section> <!--  end .footer-widget-area  -->
 
+      <!--FOOTER CONTENT  -->
 
- </html>
+      <section class="footer-contents">
+
+          <div class="container">
+
+              <div class="row clearfix">
+                  <div class="col-md-12 col-sm-12 text-center clearfix">
+                      <p class="copyright-text"> Copyright © 2017-2018. All Right Reserved - by xenioushk </p>
+                  </div>
+
+              </div>
+
+          </div>
+
+      </section>
+
+  </footer>
+
+  <!-- BACK TO TOP BUTTON  -->
+
+  <a id="backTop">Back To Top</a>
+
+  <script src="<?php echo base_url('assets/depan/') ?>js/jquery.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/bootstrap.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/wow.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/jquery.backTop.min.js "></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/waypoints.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/waypoints-sticky.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/owl.carousel.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/jquery.stellar.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/jquery.counterup.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/venobox.min.js"></script>
+  <script src="https://maps.google.com/maps/api/js?sensor=true&key=AIzaSyB8asWf-NyxR0dTHf_OMY9iT_lRncQG8x8 "></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/jquery.gmap.min.js"></script>
+  <script src="<?php echo base_url('assets/depan/') ?>js/custom-scripts.js"></script>
+  </body>
+
+  </html>
