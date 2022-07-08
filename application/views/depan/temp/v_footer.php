@@ -18,12 +18,11 @@
                               <div class="textwidget about-footer">
 
                                   <div class="footer-widget-header clearfix">
-                                      <h3>ABOUT AQUA SHATAR</h3>
+                                      <h3><?php echo $this->db->query("select * from tbl_perusahaan")->row()->nama_perush ?></h3>
                                   </div> <!--  end .footer-widget-header -->
 
                                   <div class="footer-about-text margin-top-16">
-                                      Aqua Shatar offers professional swim training services at our retail locations throughout town.
-                                      The high level of customer service has allowed to open multiple full-service swim centers.
+                                      <?php echo $this->db->query("select * from tbl_perusahaan")->row()->tentang_perush ?>
                                   </div>
 
 
@@ -66,20 +65,20 @@
                           <div class="sidebar-widget-wrapper">
 
                               <div class="footer-widget-header clearfix">
-                                  <h3>CONTACT US</h3>
+                                  <h3>Hubungi Kami</h3>
                               </div> <!--  end .footer-widget-header -->
 
 
                               <div class="textwidget">
 
                                   <i class="fa fa-envelope-o fa-contact"></i>
-                                  <p><a href="#">support-us@swimes.com</a><br /><a href="#">helpmenow@swimes.com</a></p>
+                                  <p><a href="#"><?php echo $this->db->query("select * from tbl_perusahaan")->row()->email_perush ?></a><br /><a href="#">helpmenow@swimes.com</a></p>
 
                                   <i class="fa fa-location-arrow fa-contact"></i>
-                                  <p>Road-2,3/A East Shibgonj<br />Sylhet-3100, Bangladesh</p>
+                                  <p><?php echo $this->db->query("select * from tbl_perusahaan")->row()->alamat_perush ?></p>
 
                                   <i class="fa fa-phone fa-contact"></i>
-                                  <p>Office:&nbsp; (+880) 0823 560 433<br />Cell:&nbsp; (+880) 0723 161 343</p>
+                                  <p>Office:&nbsp; <?php echo $this->db->query("select * from tbl_perusahaan")->row()->telepon_perush ?><br /></p>
 
                               </div>
 
