@@ -8,11 +8,11 @@
 
 
                 <h3>
-                    Get Appointment
+                    <?php echo $judul ?>
                 </h3>
 
                 <p class="page-breadcrumb">
-                    <a href="#">Home</a> / Get Appointment
+                    <a href="<?php echo base_url('depan') ?>">Home</a> / <?php echo $judul ?>
                 </p>
 
 
@@ -42,20 +42,20 @@
                         </h2>
 
                         <p>
-                            Please fill out the booking form and soon we will contact you to schedule an appointment.
+                            <?php echo $kalimat ?>
                         </p>
 
                     </div>
 
                     <form class="appoinment-form">
                         <div class="form-group col-md-12">
-                            <input id="your_name" class="form-control" placeholder="Name" type="text" required="" data-msg="This field is required.">
+                            <input name="nama_pelamar" id="your_name" class="form-control" placeholder="Nama Lengkap" type="text" required="" data-msg="This field is required.">
                         </div>
                         <div class="form-group col-md-12">
-                            <input id="your_email" class="form-control" placeholder="Email" type="email" required="" data-msg="This field is required.">
+                            <input name="alamat_pelamar" id="your_email" class="form-control" placeholder="Alamat Lengkap" type="text" required="" data-msg="This field is required.">
                         </div>
                         <div class="form-group col-md-12">
-                            <input id="your_phone" class="form-control" placeholder="Phone" type="text" required="" data-msg="This field is required.">
+                            <input name="username_pelamar" id="your_phone" class="form-control" placeholder="Phone" type="text" required="" value="<?php echo $this->Mglobal->kode_otomatis('kd_pelamar', 'tbl_pelamar', 'KANDIDAT') ?>" data-msg="This field is required.">
                         </div>
 
                         <div class="form-group col-md-12 col-sm-12 col-xs-12">
