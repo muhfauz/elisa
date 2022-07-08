@@ -136,7 +136,13 @@
                         </li>
 
                         <li><a href="contact.html">Contact</a></li>
-                        <li><a href="appointment.html" class="nav-btn-highlight">Get Free Quote</a></li>
+                        <?php if ($this->session->userdata('status') == 'login') { ?>
+                            <li><a href="appointment.html" class="nav-btn-highlight">Beranda</a></li>
+                        <?php } else { ?>
+                            <li><a href="appointment.html" class="nav-btn-highlight">Daftar</a></li>
+                            <li><a href="appointment.html" class="nav-btn-highlight">Login</a></li>
+                        <?php } ?>
+
                     </ul>
                 </div>
             </div>
