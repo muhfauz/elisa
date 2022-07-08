@@ -48,133 +48,39 @@
         </div>
 
         <div class="row">
+            <?php foreach ($lowongan as $l) : ?>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                    <a href="#">
 
-                <a href="#">
+                        <article class="service-block-2 text-center">
+                            <figure>
+                                <img src="<?php echo base_url('gambar/') . $l->gambar_lowongan ?>" alt="service" />
+                                <span class="fa fa-wrench"></span>
+                            </figure>
 
-                    <article class="service-block-2 text-center">
-                        <figure>
-                            <img src="<?php echo base_url('assets/depan/') ?>images/service_1.jpg" alt="service" />
-                            <span class="fa fa-wrench"></span>
-                        </figure>
+                            <h3>
+                                <?php echo $l->nama_lowongan ?>
+                                <br />
+                                <span>Deadline <?php echo $this->Mglobal->tanggalindo($l->tgl_tutup) ?></span>
+                            </h3>
 
-                        <h3>
-                            Kid | 4-35 Month
-                            <br />
-                            <span>Starting @ $19</span>
-                        </h3>
+                        </article>
 
-                    </article>
+                    </a>
 
-                </a>
+                </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
+            <?php endforeach; ?>
 
-            </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 
-                <a href="#">
 
-                    <article class="service-block-2 text-center">
-                        <figure>
-                            <img src="<?php echo base_url('assets/depan/') ?>images/service_2.jpg" alt="service" />
-                            <span class="fa fa-compress"></span>
-                        </figure>
 
-                        <h3>
-                            Junior | 3-4 Years
 
-                            <br />
-                            <span>Starting @ $59</span>
-                        </h3>
 
-                    </article>
-                </a>
 
-            </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
 
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
 
-                <a href="#">
-
-                    <article class="service-block-2 text-center">
-                        <figure>
-                            <img src="<?php echo base_url('assets/depan/') ?>images/service_3.jpg" alt="service" />
-                            <span class="fa fa-address-card"></span>
-                        </figure>
-
-                        <h3>
-                            Teen | 8-16 Years
-                            <br />
-                            <span>Starting @ $33</span>
-                        </h3>
-
-                    </article>
-                </a>
-
-            </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-
-                <a href="#">
-
-                    <article class="service-block-2 text-center">
-                        <figure>
-                            <img src="<?php echo base_url('assets/depan/') ?>images/service_4.jpg" alt="service" />
-                            <span class="fa fa-th-list"></span>
-                        </figure>
-
-                        <h3>
-                            Pro | 16-40 Years
-                            <br />
-                            <span>Starting @ $29</span>
-                        </h3>
-
-                    </article>
-                </a>
-            </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-
-                <a href="#">
-
-                    <article class="service-block-2 text-center">
-                        <figure>
-                            <img src="<?php echo base_url('assets/depan/') ?>images/service_5.jpg" alt="service" />
-                            <span class="fa fa-hard-of-hearing"></span>
-                        </figure>
-
-                        <h3>
-                            Family | 1-50 Years
-                            <br />
-                            <span>Starting @ $29</span>
-                        </h3>
-
-                    </article>
-                </a>
-
-            </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
-
-            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-
-                <a href="#">
-
-                    <article class="service-block-2 text-center">
-                        <figure>
-                            <img src="<?php echo base_url('assets/depan/') ?>images/service_6.jpg" alt="service" />
-                            <span class="fa fa-key"></span>
-                        </figure>
-
-                        <h3>
-                            Friends | 16-40 Years
-                            <br />
-                            <span>Starting @ $15</span>
-                        </h3>
-
-                    </article>
-                </a>
-
-            </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
 
         </div> <!--  end .row  -->
 

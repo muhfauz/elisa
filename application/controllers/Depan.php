@@ -106,7 +106,8 @@ class Depan extends CI_Controller
 
 	public function lowongan()
 	{
-		// $data['lowongan'] = $this->db->query("select * from tbl_lowongan L, tbl_bidang B, tbl_perusahaan P where L.kd_bidang=B.kd_bidang and L.kd_perush=P.kd_perush")->result();
+		$tglsekarang = date('Y-m-d');
+		$data['lowongan'] = $this->db->query("select * from tbl_lowongan where tgl_tutup >='$tglsekarang'")->result();
 		// $data['bidang'] = $this->Mglobal->tampilkandata('tbl_bidang');
 		// $data['lowongan'] = $this->Mglobal->tampilkandata('tbl_lowongan');
 		$data['judul'] = 'Daftar Akun';
