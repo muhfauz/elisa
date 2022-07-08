@@ -127,74 +127,9 @@
           </ul>
         </li>
 
-        <?php } else {
-        // $kd_bagian = $this->session->userdata('kd_bagian');
-        $kd_santri = $this->session->userdata('kd_santri');
-        $statusdaftar = $this->db->query("select status_pendaftaran from tbl_pendaftaran")->row()->status_pendaftaran;
-        $tgl_pengumuman = $this->db->query("select tgl_pengumuman from tbl_pendaftaran")->row()->tgl_pengumuman;
-        $tgl_pendaftaran = $this->db->query("select tgl_pendaftaran from tbl_pendaftaran")->row()->tgl_pendaftaran;
-        $tgl_penutupan = $this->db->query("select tgl_penutupan from tbl_pendaftaran")->row()->tgl_penutupan;
-        $tgl_penutupan = $this->db->query("select tgl_penutupan from tbl_pendaftaran")->row()->tgl_penutupan;
-        $tgl_seleksi = $this->db->query("select tgl_seleksi from tbl_pendaftaran")->row()->tgl_seleksi;
-        $tgl_sekarang = date('Y-m-d');
-        $tempat_lahir = $this->db->query("select tempat_lahir from tbl_santri where kd_santri='$kd_santri'")->row()->tempat_lahir;
-        $statussantri = $this->session->userdata('status_santri');
-        if ($statusdaftar == 'buka') { ?>
-          <li class="treeview"> <a href="#"><i class="fa fa-cc-diners-club mr-2" aria-hidden="true"></i><span>Pendaftaran <?= $statusdaftar; ?></span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
-            <ul class="treeview-menu">
-              <?php if ($statussantri == 'daftar') { ?>
-                <!-- <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/syarat') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Tata Cara Pendaftaran</a></li> -->
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/jadwal') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Jadwal Pendaftaran</a></li>
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/datasantri') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Pendaftaran </a></li>
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/uploadbukti') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Upload Berkas </a></li>
-
-                <?php if ($tempat_lahir <> "") {
-                ?>
-                  <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/cetakbukti') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Bukti Pendaftaran </a></li>
-
-                  <?php if (strtotime($tgl_pengumuman) <= strtotime($tgl_sekarang)) { ?>
-                    <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/hasilseleksi') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Hasil Seleksi</a></li>
-                  <?php } ?>
-                <?php } ?>
-              <?php } else { ?>
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/hasilseleksi') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Hasil Seleksi</a></li>
-              <?php  } ?>
-
-            </ul>
-          </li>
-        <?php } else { ?>
-          <li class="treeview"> <a href="#"><i class="fa fa-cc-diners-club mr-2" aria-hidden="true"></i><span>Pendaftaran <?= $statusdaftar; ?></span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
-            <ul class="treeview-menu">
-              <?php if ($statussantri == 'daftar' and $tempat_lahir <> "") { ?>
-
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/syarat') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Tata Cara Pendaftaran</a></li>
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/jadwal') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Jadwal Pendaftaran</a></li>
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/datasantrix') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Pendaftaran x </a></li>
-                <?php if ($tempat_lahir <> "") {
-                ?>
-                  <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/datasantrix') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Bukti Pendaftaran </a></li>
-                  <?php if ($tgl_pengumuman >= $tgl_sekarang) { ?>
-                    <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/syarat') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Hasil Seleksi</a></li>
-                  <?php } ?>
-
-                <?php } ?> //sudah mendaftar
-              <?php }  ?>
-              <?php if ($statussantri == 'daftar' and $tempat_lahir == "") { ?>
-
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/syarat') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Tata Cara Pendaftaran</a></li>
-                <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/jadwal') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Jadwal Pendaftaran</a></li>
-                <!-- <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/datasantrix') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Pendaftaran x </a></li> -->
-                <?php if ($tempat_lahir <> "") {
-                ?>
-                  <!-- <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/datasantrix') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Bukti Pendaftaran </a></li> -->
-                <?php } ?>
-                <!-- <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/syarat') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Hasil Seleksi</a></li> -->
-              <?php  } ?>
+      <?php } else { ?>
 
 
-            </ul>
-          </li>
-        <?php } ?>
         <li class="treeview"> <a href="#"><i class="fa fa-cogs mr-2" aria-hidden="true"></i><span>Pengaturan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
             <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/gantipassantri') ?>"><i class="fa fa-key mr-2" aria-hidden="true"></i>Ganti Password</a></li>

@@ -28,6 +28,6 @@
 </head>
 
 <body>
-    <div id="preloader">
+    <!-- <div id="preloader">
         <span class="margin-bottom"><img src="<?php echo base_url('assets/depan/') ?>images/loader.gif" alt="Loading......" /></span>
-    </div>
+    </div> -->

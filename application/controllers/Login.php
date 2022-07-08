@@ -46,17 +46,17 @@ class Login extends CI_Controller
 				}
 				redirect(base_url('welcome'));
 			} else {
-				$where = array('kd_santri' => $username, 'password_santri' => md5($password));
+				$where = array('kd_pelamar' => $username, 'password_pelamar' => md5($password));
 				/*$dt = $this->Mglobal->tampilkandatasingle1('tbl_user', $where);
 				$hasil = $this->Mglobal->tampilkandatasingle1('tbl_user', $where)->row();
 				*/
-				$dt = $this->db->query("select * from tbl_santri where kd_santri='$username' and password_santri='$password2'");
-				$hasil = $this->db->query("select * from tbl_santri where kd_santri='$username' and password_santri='$password2'")->row();
+				$dt = $this->db->query("select * from tbl_pelamar where kd_pelamar='$username' and password_pelamar='$password2'");
+				$hasil = $this->db->query("select * from tbl_pelamar where kd_pelamar='$username' and password_pelamar='$password2'")->row();
 				// $hasil = $this->db->query("select * from tbl_user P, tbl_propinsi PR where P.id_propinsi=PR.id_propinsi and P.kd_user='$username' and P.password_user='$password2'")->row();
 				$proses = $dt->num_rows();
 
 				if ($proses > 0) {
-					$session = array('kd_santri' => $hasil->kd_santri, 'nama_santri' => $hasil->nama_santri, 'status' => 'login', 'status_santri' => $hasil->status_santri, 'posisi' => 'santri', 'password_santri' => $hasil->password_santri);
+					$session = array('kd_pelamar' => $hasil->kd_pelamar, 'nama_pelamar' => $hasil->nama_pelamar, 'status' => 'login', 'status_pelamar' => $hasil->status_pelamar, 'posisi' => 'pelamar', 'password_pelamar' => $hasil->password_pelamar);
 					$this->session->set_userdata($session);
 					redirect(base_url('welcome'));
 				} else {
