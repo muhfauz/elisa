@@ -4,18 +4,32 @@
   <div class="sidebar">
     <!-- Sidebar user panel -->
     <div class="user-panel">
+      <?php
+      $kd_admin = $this->session->userdata('kd_admin');
+      $kd_pelamar = $this->session->userdata('kd_pelamar');
+      $kd_hrd = $this->session->userdata('kd_hrd');
+      ?>
       <?php if ($this->session->userdata('posisi') == 'admin') { ?>
-        <div class="image text-center"><img src="<?php echo base_url() ?>gambar/<?php echo $this->session->userdata('gambar_admin') ?>" class="img-circle" alt="User Image"> </div>
+        <div class="image text-center"><img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_admin where kd_admin='$kd_admin'")->row()->gambar_admin ?>" class="img-circle" alt="User Image"> </div>
+      <?php } elseif ($this->session->userdata('posisi') == 'pelamar') { ?>
+        <div class="image text-center"><img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->gambar_pelamar ?>" class="img-circle" alt="User Image"> </div>
       <?php } else { ?>
-        <div class="image text-center"><img src="<?php echo base_url() ?>assets/img/<?php echo $this->session->userdata('gambar_santri') ?>" class="img-circle" alt="User Image"> </div>
+        <div class="image text-center"><img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_hrd where kd_hrd='$kd_hrd'")->row()->gambar_hrd ?>" class="img-circle" alt="User Image"> </div>
       <?php } ?>
 
       <div class="info">
         <?php if ($this->session->userdata('posisi') == 'admin') { ?>
-
-          <p><?php echo $this->session->userdata('nama_admin') ?></p>
+          <p>
+            <?php echo $this->db->query("select * from tbl_admin where kd_admin='$kd_admin'")->row()->nama_admin ?>
+          </p>
+        <?php } elseif ($this->session->userdata('posisi') == 'pelamar') { ?>
+          <p>
+            <?php echo $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->nama_pelamar ?>
+          </p>
         <?php } else { ?>
-          <p><?php echo $this->session->userdata('nama_santri') ?></p>
+          <p>
+            <?php echo $this->db->query("select * from tbl_hrd where kd_hrd='$kd_hrd'")->row()->nama_hrd ?>
+          </p>
         <?php } ?>
 
         <a href="<?php echo base_url('login/logout') ?>"><i class="fa fa-power-off"></i></a>

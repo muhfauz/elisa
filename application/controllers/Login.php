@@ -60,16 +60,32 @@ class Login extends CI_Controller
 					$this->session->set_userdata($session);
 					redirect(base_url('welcome'));
 				} else {
-					//$data['judul']=$this->Mglobal->tampilkandata('tbl_judul');
+					$where = array('kd_hrd' => $username, 'password_hrd' => md5($password));
+					/*$dt = $this->Mglobal->tampilkandatasingle1('tbl_user', $where);
+				$hasil = $this->Mglobal->tampilkandatasingle1('tbl_user', $where)->row();
+				*/
+					$dt = $this->db->query("select * from tbl_hrd where kd_hrd='$username' and password_hrd='$password2'");
+					$hasil = $this->db->query("select * from tbl_hrd where kd_hrd='$username' and password_hrd='$password2'")->row();
+					// $hasil = $this->db->query("select * from tbl_user P, tbl_propinsi PR where P.id_propinsi=PR.id_propinsi and P.kd_user='$username' and P.password_user='$password2'")->row();
+					$proses = $dt->num_rows();
+					if ($proses > 0) {
+						$session = array('kd_hrd' => $hasil->kd_hrd, 'nama_hrd' => $hasil->nama_pelamar, 'status' => 'login', 'status_hrd' => $hasil->status_hrd, 'posisi' => 'hrd', 'password_pelamar' => $hasil->password_hrd);
+						$this->session->set_userdata($session);
+						redirect(base_url('welcome'));
+					} else {
 
-					$this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-               <strong >Login Gagal!</strong><br> Username atau Password Salah!!.
-               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                 <span aria-hidden="true">&times;</span>
-               </button>
-             </div>');
-					//$this->load->view('vlogin',$data);
-					redirect(base_url('depan/login'));
+
+
+						//$data['judul']=$this->Mglobal->tampilkandata('tbl_judul');
+
+						$this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
+              		 <strong >Login Gagal!</strong><br> Username atau Password Salah!!.  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              			   <span aria-hidden="true">&times;</span>
+               				</button>
+             				</div>');
+						//$this->load->view('vlogin',$data);
+						redirect(base_url('depan/login'));
+					}
 				}
 			}
 		} else {
