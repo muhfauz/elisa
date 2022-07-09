@@ -54,10 +54,14 @@
                     <a href="#">
 
                         <article class="service-block-2 text-center">
-                            <figure>
-                                <img src="<?php echo base_url('gambar/') . $l->gambar_lowongan ?>" alt="service" />
-                                <span class="fa fa-wrench"></span>
-                            </figure>
+                            <a href="<?php echo base_url('lowongan/detail/') . $l->kd_lowonganen ?>">
+                                <figure>
+
+                                    <img src="<?php echo base_url('gambar/') . $l->gambar_lowongan ?>" alt="service" />
+
+                                    <span class="fa fa-wrench"></span>
+                                </figure>
+                            </a>
 
                             <h3>
                                 <?php echo $l->nama_lowongan ?>

@@ -16,6 +16,13 @@
     <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
         <![endif]-->
+    <!-- tambahan -->
+    <!-- <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/font-awesome/css/font-awesome.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/et-line-font/et-line-font.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/themify-icons/themify-icons.css">
+
+
 
     <!-- The styles -->
     <link href="<?php echo base_url('assets/depan/') ?>css/bootstrap.min.css" rel="stylesheet" type="text/css" />
@@ -25,6 +32,7 @@
     <link href="<?php echo base_url('assets/depan/') ?>css/animate.css" rel="stylesheet" type="text/css" />
     <link href="<?php echo base_url('assets/depan/') ?>css/venobox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="<?php echo base_url('assets/depan/') ?>css/styles.css" type="text/css" />
+    <script src="<?php echo base_url() ?>assets/bootstrap/js/jquery.js"></script>
 </head>
 
 <body>

@@ -1,89 +1,317 @@
-<!--  PAGE HEADING -->
+<?php foreach ($lowongan as $l) : ?>
 
-<section class="page-header">
+    <section class="page-header">
 
-    <div class="container">
+        <div class="container">
 
-        <div class="row">
+            <div class="row">
 
-            <div class="col-sm-12 text-center">
+                <div class="col-sm-12 text-center">
 
 
-                <h3>
-                    Our Services
-                </h3>
+                    <h3>
+                        <?php echo $l->nama_lowongan ?>
+                    </h3>
 
-                <p class="page-breadcrumb">
-                    <a href="#">Home</a> / Our Services
-                </p>
+                    <p class="page-breadcrumb">
+                        <a href="#">Home</a> / Single Service
+                    </p>
 
+
+                </div>
+
+            </div> <!-- end .row  -->
+
+        </div> <!-- end .container  -->
+
+    </section> <!-- end .page-header  -->
+
+    <!-- SINGLE SERVICE PAGE -->
+
+    <section class="section-content-block">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-4 col-sm-12">
+
+
+                    <div class="widget site-sidebar">
+
+                        <h2 class="widget-title">Our Packages</h2>
+
+                        <ul class="widget-service-category clearfix">
+                            <li>
+                                <a title="service details" href="#">Kid | 4-35 Month </a>
+                            </li>
+                            <li>
+                                <a title="service details" href="#">Junior | 3-4 Years </a>
+                            </li>
+                            <li>
+                                <a title="service details" href="#">Teen | 8-16 Years</a>
+                            </li>
+                            <li>
+                                <a title="service details" href="#">Pro | 16-40 Years</a>
+                            </li>
+                            <li>
+                                <a title="service details" href="#">Family | 1-50 Years</a>
+                            </li>
+                            <li>
+                                <a title="service details" href="#">Friends | 16-40 Years</a>
+                            </li>
+                        </ul>
+
+                    </div> <!--  end .widget -->
+
+                    <div class="widget site-sidebar">
+
+                        <h2 class="widget-title">Testimonials</h2>
+
+                        <div class="testimonial-container no-padding owl-carousel text-left padding-top-24" data-items="1" data-dots="false">
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                <div class="testimony-layout-1  no-padding transparent-bg">
+
+                                    <p class="testimony-text">
+                                        Always friendly, honest service. Comparable prices and good advice.
+                                    </p>
+
+                                    <div class="testimony-info">
+                                        <h4>Brandon Munson </h4>
+                                        <h6>CTO, Fulcrum Design</h6>
+                                    </div>
+                                </div> <!-- end .testimony-layout-1  -->
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                <div class="testimony-layout-1  no-padding transparent-bg">
+                                    <p class="testimony-text">
+                                        Always friendly, honest service. Comparable prices and good advice.
+                                    </p>
+                                    <div class="testimony-info">
+                                        <h4>Sunnybrook Church </h4>
+                                        <h6 class="bq-author-info">CEO, HW Tech Inc</h6>
+                                    </div>
+                                </div> <!-- end .testimony-layout-1  -->
+
+                            </div>
+
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+
+                                <div class="testimony-layout-1  no-padding transparent-bg">
+                                    <p class="testimony-text">
+                                        Always friendly, honest service. Comparable prices and good advice.
+                                    </p>
+                                    <div class="testimony-info">
+                                        <h4>Sunnybrook Church </h4>
+                                        <h6 class="bq-author-info">CEO, HW Tech Inc</h6>
+                                    </div>
+                                </div> <!-- end .testimony-layout-1  -->
+
+                            </div>
+
+                        </div> <!-- end .testimonial-container  -->
+
+                    </div> <!--  end .widget -->
+
+                    <div class="widget site-sidebar">
+
+                        <h2 class="widget-title">Our Brochure</h2>
+
+                        <div class="text-widget">
+                            Swim Easy offers professional swimming classes at our academies throughout world.
+                            The high level of customer service has allowed to open multiple swim training centers.
+                            <p>
+                                <a href="#"><img src="images/brochure.png" alt="" /></a>
+                            </p>
+                        </div>
+
+                    </div> <!--  end .widget -->
+
+                    <div class="widget site-sidebar">
+
+                        <h2 class="widget-title">Contact Support</h2>
+
+                        <div class="text-widget text-center">
+
+                            <p>
+                                <img src="images/support_user.jpg" alt="" class="img-circle img-thumbnail inline" />
+                                <br />
+                                <strong>John Bendonra</strong>
+                                <br />
+                                <i>Senior Trainer, Swim Easy</i>
+                                <span class="block-primary-bg text-light-color padding-all-4 margin-top-24 db text-center">
+                                    (+88)-0191-1613-458
+                                </span>
+                            </p>
+                        </div>
+
+                    </div> <!--  end .widget -->
+
+                </div> <!-- end .col-sm-4  -->
+
+                <div class="col-sm-8">
+
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            <div class="single-service margin-bottom-24">
+                                <a href="#" title="Service">
+                                    <img src="<?php echo base_url('gambar/') . $l->gambar_lowongan ?>" alt="lowongan" />
+                                </a>
+                            </div> <!--  end articles -->
+
+
+
+                            <div class="single-service-content">
+
+
+                                <h2 class="block-heading-title text-capitalize"><?php echo $l->nama_lowongan ?></h2>
+                                <hr />
+                                <?php echo $l->detail_lowongan ?>
+
+
+                                <h3 class="block-heading-title text-capitalize">Lamar</h3>
+                                <button class="btn btn-danger btn-sm text-highlighter-white"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i> Paling lambat <?php echo $this->Mglobal->tanggalindo($l->tgl_tutup) ?></button>
+                                <a href="" class="btn btn-danger btn-sm mb-1" data-toggle="modal" data-target="#hapusdata<?php echo $l->kd_lowongan ?>"> <i class="fa fa-trash mr-2"></i> Hapus</a>
+                                <hr />
+
+
+
+                            </div>
+
+                            <div class="single-service-content">
+                                <h3 class="block-heading-title text-capitalize">Popular Questions:</h3>
+                                <hr />
+
+                                <div class="faq-layout margin-top-16" id="accordion">
+
+                                    <div class="panel panel-default faq-box">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">What Maintenance Should I be doing and when?</a>
+                                            </p>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Talk to your veterinarian about how to care for your older pet and be prepared for possible age-related health issues. Senior pets require increased attention, including more frequent visits to the veterinarian, possible changes in diet, and in some cases alterations to their home environment.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default faq-box">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">How do I know when my car needs a tune up?</a>
+                                            </p>
+                                        </div>
+                                        <div id="collapseTwo" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Talk to your veterinarian about how to care for your older pet and be prepared for possible age-related health issues. Senior pets require increased attention, including more frequent visits to the veterinarian, possible changes in diet, and in some cases alterations to their home environment.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default faq-box">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How should I prepare my car for a road trip?</a>
+                                            </p>
+                                        </div>
+                                        <div id="collapseThree" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Talk to your veterinarian about how to care for your older pet and be prepared for possible age-related health issues. Senior pets require increased attention, including more frequent visits to the veterinarian, possible changes in diet, and in some cases alterations to their home environment.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default faq-box">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">What Maintenance Should I be doing and when?</a>
+                                            </p>
+                                        </div>
+                                        <div id="collapseFour" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                We all to some extent are on an End of Life journey. For some of our clients and their family additional care and help is required as they progress through this journey. Care on Call work closely with.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default faq-box">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">How do I know when my car needs a tune up?</a>
+                                            </p>
+                                        </div>
+                                        <div id="collapseFive" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Talk to your veterinarian about how to care for your older pet and be prepared for possible age-related health issues. Senior pets require increased attention, including more frequent visits to the veterinarian, possible changes in diet, and in some cases alterations to their home environment.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="panel panel-default faq-box">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">How do I know when my car needs a tune up?</a>
+                                            </p>
+                                        </div>
+                                        <div id="collapseEight" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                Talk to your veterinarian about how to care for your older pet and be prepared for possible age-related health issues. Senior pets require increased attention, including more frequent visits to the veterinarian, possible changes in diet, and in some cases alterations to their home environment.
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div> <!-- end .col-md-6  -->
+
+                            </div>
+
+                        </div>
+
+                    </div> <!-- end .container  -->
+
+                </div>
 
             </div>
 
-        </div> <!-- end .row  -->
-
-    </div> <!-- end .container  -->
-
-</section> <!-- end .page-header  -->
-
-
-<!--  SECTION SERVICE 03 -->
-
-<section class="section-content-block section-secondary-bg section-curve-white-overlary">
-
-    <div class="container">
-
-        <div class="row section-heading-wrapper">
-
-            <div class="col-md-12 col-sm-12 text-center">
-                <h4 class="heading-alt-style text-capitalize text-dark-color">OUR PACKAGES</h4>
-                <span class="heading-separator heading-separator-horizontal"></span>
-                <h2 class="subheading-alt-style">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur eu ante non ex lobortis posuere
-                    <br />
-                    volutpat nec orci morbi facilisis massa lectus volutpat posuere volutpat.
-                </h2>
-            </div> <!-- end .col-sm-12  -->
-
         </div>
 
-        <div class="row">
-            <?php foreach ($lowongan as $l) : ?>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+    </section> <!--  end .section-our-team -->
+<?php endforeach; ?>
+<?php foreach ($lowongan as $l) : ?>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
 
-                    <a href="#">
+    <!-- Modal -->
+    <div class="modal fade" id="hapusdata<?php echo $l->kd_lowongan ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white ">
+                    <h5 class="modal-title" id="exampleModalLabel"> Lamar <?php echo $l->nama_lowongan ?></h5>
+                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button> -->
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('lowongan/lamar') ?>" method="post">
+                        <label for=""></label>
+                        <input type="hidden" name="kd_lowongan" value="<?php echo $l->kd_lowongan ?>">
 
-                        <article class="service-block-2 text-center">
-                            <figure>
-                                <img src="<?php echo base_url('gambar/') . $l->gambar_lowongan ?>" alt="service" />
-                                <span class="fa fa-wrench"></span>
-                            </figure>
-
-                            <h3>
-                                <?php echo $l->nama_lowongan ?>
-                                <br />
-                                <span>Deadline <?php echo $this->Mglobal->tanggalindo($l->tgl_tutup) ?></span>
-                            </h3>
-
-                        </article>
-
-                    </a>
-
-                </div> <!--  end .col-lg-4 col-md-4 col-sm-12  -->
-            <?php endforeach; ?>
-
-
-
-
-
-
-
-
-
-
-
-        </div> <!--  end .row  -->
-
-    </div> <!--  end .container  -->
-
-</section> <!--  end .section-content-block -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary"><i class="fa fa-check text-white mr-2" aria-hidden="true"></i>Lamar</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
