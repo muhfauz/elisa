@@ -63,7 +63,8 @@ class Lowongan extends CI_Controller
             'kd_seleksi' => $this->Mglobal->kode_otomatis('kd_seleksi', 'tbl_seleksi', 'SEL'),
             'kd_lowongan' => $this->input->post('kd_lowongan'),
             'tgl_seleksi' => date('Y-m-d'),
-
+            'kd_pelamar' => $this->session->userdata('kd_pelamar'),
+            'data_psikotes' => 'psikotest.pdf',
         );
         $this->Mglobal->tambahdata($data, 'tbl_seleksi');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -72,6 +73,6 @@ class Lowongan extends CI_Controller
               <span aria-hidden="true">&times;</span>
             </button>
           </div>');
-        redirect(base_url('depan/daftar'));
+        redirect(base_url('welcome'));
     }
 }

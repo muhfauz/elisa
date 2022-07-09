@@ -128,6 +128,12 @@
         </li>
 
       <?php } else { ?>
+        <li class="treeview"> <a href="#"><i class="fa fa-cogs mr-2" aria-hidden="true"></i><span>Berkas</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/gantipassantri') ?>"><i class="fa fa-key mr-2" aria-hidden="true"></i>Upload Berkas</a></li>
+
+          </ul>
+        </li>
 
 
         <li class="treeview"> <a href="#"><i class="fa fa-cogs mr-2" aria-hidden="true"></i><span>Pengaturan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>

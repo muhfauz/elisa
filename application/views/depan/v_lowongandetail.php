@@ -177,7 +177,23 @@
 
                                 <h3 class="block-heading-title text-capitalize">Lamar</h3>
                                 <button class="btn btn-danger btn-sm text-highlighter-white"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i> Paling lambat <?php echo $this->Mglobal->tanggalindo($l->tgl_tutup) ?></button>
-                                <a href="" class="btn btn-primary btn-lg mb-1" data-toggle="modal" data-target="#hapusdata<?php echo $l->kd_lowongan ?>"> <i class="fa check mr-2"></i> Apply </a>
+                                <?php if ($this->session->userdata('status') == 'login') {
+                                    if ($this->session->userdata('posisi') == 'pelamar') {
+                                        $kd_pelamar = $this->session->userdata('kd_pelamar');
+                                        $kd_lowongan = $l->kd_lowongan;
+                                        $sudah = $this->db->query("select * from tbl_seleksi where kd_pelamar='$kd_pelamar' and kd_lowongan='$kd_lowongan'")->num_rows();
+                                        if ($sudah > 0) { ?>
+                                            <button class="btn btn-sm btn-danger">Anda sudah daftar lowogan ini</button>
+                                        <?php   } else { ?>
+
+                                            <a href="" class="btn btn-primary btn-lg mb-1" data-toggle="modal" data-target="#hapusdata<?php echo $l->kd_lowongan ?>"> <i class="fa check mr-2"></i> Apply </a>
+                                        <?php    }   ?>
+                                    <?php   }   ?>
+                                <?php } else { ?>
+                                    <a href="" class="btn btn-primary btn-lg mb-1" data-toggle="modal" data-target="#pesandata<?php echo $l->kd_lowongan ?>"> <i class="fa check mr-2"></i> Apply </a>
+                                <?php } ?>
+
+
                                 <hr />
 
 
@@ -309,6 +325,37 @@
                     <button type="submit" class="btn btn-primary fa fa-check"> Lamar</button>
                 </div>
                 </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+<?php foreach ($lowongan as $l) : ?>
+    <!-- Button trigger modal -->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="pesandata<?php echo $l->kd_lowongan ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white ">
+                    <h5 class="modal-title" id="exampleModalLabel"> Lamar <?php echo $l->nama_lowongan ?></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="">ANDA HARUS LOGIN /DAFTAR DULU</label>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="<?php echo base_url('depan/daftar') ?>">
+                        <button type="button" class="btn btn-primary fa fa-check"> Daftar</button>
+                    </a>
+                    <a href="<?php echo base_url('login') ?>">
+                        <button type="button" class="btn btn-primary fa fa-check"> Login</button>
+                    </a>
+                </div>
+
             </div>
         </div>
     </div>
