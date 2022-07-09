@@ -59,7 +59,7 @@
 
                                     <img src="<?php echo base_url('gambar/') . $l->gambar_lowongan ?>" alt="service" />
 
-                                    <span class="fa fa-wrench"></span>
+                                    <span class="fa fa-check-square"></span>
                                 </figure>
                             </a>
 

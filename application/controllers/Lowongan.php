@@ -57,4 +57,21 @@ class Lowongan extends CI_Controller
         $this->load->view('depan/v_lowongandetail');
         $this->load->view('depan/temp/v_footer');
     }
+    public function lamar()
+    {
+        $data = array(
+            'kd_seleksi' => $this->Mglobal->kode_otomatis('kd_seleksi', 'tbl_seleksi', 'SEL'),
+            'kd_lowongan' => $this->input->post('kd_lowongan'),
+            'tgl_seleksi' => date('Y-m-d'),
+
+        );
+        $this->Mglobal->tambahdata($data, 'tbl_seleksi');
+        $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Tambah Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+        redirect(base_url('depan/daftar'));
+    }
 }

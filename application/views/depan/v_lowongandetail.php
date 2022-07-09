@@ -177,7 +177,7 @@
 
                                 <h3 class="block-heading-title text-capitalize">Lamar</h3>
                                 <button class="btn btn-danger btn-sm text-highlighter-white"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i> Paling lambat <?php echo $this->Mglobal->tanggalindo($l->tgl_tutup) ?></button>
-                                <a href="" class="btn btn-danger btn-sm mb-1" data-toggle="modal" data-target="#hapusdata<?php echo $l->kd_lowongan ?>"> <i class="fa fa-trash mr-2"></i> Hapus</a>
+                                <a href="" class="btn btn-primary btn-lg mb-1" data-toggle="modal" data-target="#hapusdata<?php echo $l->kd_lowongan ?>"> <i class="fa check mr-2"></i> Apply </a>
                                 <hr />
 
 
@@ -286,9 +286,7 @@
 <?php endforeach; ?>
 <?php foreach ($lowongan as $l) : ?>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-        Launch demo modal
-    </button>
+
 
     <!-- Modal -->
     <div class="modal fade" id="hapusdata<?php echo $l->kd_lowongan ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -296,9 +294,9 @@
             <div class="modal-content">
                 <div class="modal-header bg-info text-white ">
                     <h5 class="modal-title" id="exampleModalLabel"> Lamar <?php echo $l->nama_lowongan ?></h5>
-                    <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                    </button> -->
+                    </button>
                 </div>
                 <div class="modal-body">
                     <form action="<?php echo base_url('lowongan/lamar') ?>" method="post">
@@ -308,7 +306,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary"><i class="fa fa-check text-white mr-2" aria-hidden="true"></i>Lamar</button>
+                    <button type="submit" class="btn btn-primary fa fa-check"> Lamar</button>
                 </div>
                 </form>
             </div>
