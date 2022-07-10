@@ -33,110 +33,49 @@
     </div>
     <div class=" navbar-custom-menu">
       <ul class="nav navbar-nav">
-        <!-- Messages: style can be found in dropdown.less-->
-        <!-- <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-envelope-o"></i>
-            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-          </a> -->
-        <!-- <ul class="dropdown-menu">
-            <li class="header">You have 4 new messages</li>
-            <li>
-              <ul class="menu">
-                <li><a href="#">
-                    <div class="pull-left"><img src="<?php echo base_url() ?>assets/img/<?php echo $this->session->userdata('gambar') ?>" class="img-circle" alt="User Image"> <span class="profile-status online pull-right"></span></div>
-                    <h4>Alex C. Patton</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">9:30 AM</span></p>
-                  </a></li>
-                <li><a href="#">
-                    <div class="pull-left"><img src="<?php echo base_url() ?>assets/img/img3.jpg" class="img-circle" alt="User Image"> <span class="profile-status offline pull-right"></span></div>
-                    <h4>Nikolaj S. Henriksen</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">10:15 AM</span></p>
-                  </a></li>
-                <li><a href="#">
-                    <div class="pull-left"><img src="<?php echo base_url() ?>assets/img/img2.jpg" class="img-circle" alt="User Image"> <span class="profile-status away pull-right"></span></div>
-                    <h4>Kasper S. Jessen</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">8:45 AM</span></p>
-                  </a></li>
-                <li><a href="#">
-                    <div class="pull-left"><img src="<?php echo base_url() ?>assets/img/img4.jpg" class="img-circle" alt="User Image"> <span class="profile-status busy pull-right"></span></div>
-                    <h4>Florence S. Kasper</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">12:15 AM</span></p>
-                  </a></li>
-              </ul>
-            </li>
-            <li class="footer"><a href="#">View All Messages</a></li>
-          </ul> -->
-        <!-- </li> -->
-        <!-- Notifications: style can be found in dropdown.less -->
-        <!-- <li class="dropdown messages-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="fa fa-bell-o"></i>
-            <div class="notify"> <span class="heartbit"></span> <span class="point"></span> </div>
-          </a>
-          <ul class="dropdown-menu">
-            <li class="header">Notifications</li>
-            <li>
-              <ul class="menu">
-                <li><a href="#">
-                    <div class="pull-left icon-circle red"><i class="icon-lightbulb"></i></div>
-                    <h4>Alex C. Patton</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">9:30 AM</span></p>
-                  </a></li>
-                <li><a href="#">
-                    <div class="pull-left icon-circle blue"><i class="fa fa-coffee"></i></div>
-                    <h4>Nikolaj S. Henriksen</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">1:30 AM</span></p>
-                  </a></li>
-                <li><a href="#">
-                    <div class="pull-left icon-circle green"><i class="fa fa-paperclip"></i></div>
-                    <h4>Kasper S. Jessen</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">9:30 AM</span></p>
-                  </a></li>
-                <li><a href="#">
-                    <div class="pull-left icon-circle yellow"><i class="fa  fa-plane"></i></div>
-                    <h4>Florence S. Kasper</h4>
-                    <p>I've finished it! See you so...</p>
-                    <p><span class="time">11:10 AM</span></p>
-                  </a></li>
-              </ul>
-            </li>
-            <li class="footer"><a href="#">Check all Notifications</a></li>
-          </ul>
-        </li> -->
-        <!-- User Account: style can be found in dropdown.less -->
+        <?php
+        $kd_admin = $this->session->userdata('kd_admin');
+        $kd_pelamar = $this->session->userdata('kd_pelamar');
+        $kd_hrd = $this->session->userdata('kd_hrd');
+        ?>
         <?php if ($this->session->userdata('posisi') == 'admin') { ?>
-
-          <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url() ?>gambar/<?php echo $this->session->userdata('gambar_admin') ?>" class="user-image" alt="User Image"> <span class="hidden-xs"><?php echo $this->session->userdata('nama_admin') ?></span> </a>
+          <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_admin where kd_admin='$kd_admin'")->row()->gambar_admin ?>" class="user-image" alt="User Image"> <span class="hidden-xs"><?php echo $this->db->query("select * from tbl_admin where kd_admin='$kd_admin'")->row()->nama_admin ?></span> </a>
+          <?php } elseif ($this->session->userdata('posisi') == 'pelamar') { ?>
+          <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->gambar_pelamar ?>" class="user-image" alt="User Image"> <span class="hidden-xs"><?php echo $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->nama_pelamar ?></span> </a>
           <?php } else { ?>
-          <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url() ?>/assets/img/<?php echo $this->session->userdata('gambar_santri') ?>" class="user-image" alt="User Image"> <span class="hidden-xs"><?php echo $this->session->userdata('nama_santri') ?></span> </a>
+          <li class="dropdown user user-menu p-ph-res"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_hrd where kd_hrd='$kd_hrd'")->row()->gambar_hrd ?>" class="user-image" alt="User Image"> <span class="hidden-xs"><?php echo $this->db->query("select * from tbl_hrd where kd_hrd='$kd_hrd'")->row()->nama_hrd ?></span> </a>
           <?php } ?>
+
 
           <ul class="dropdown-menu">
             <li class="user-header">
               <?php if ($this->session->userdata('posisi') == 'admin') { ?>
 
-                <div class="pull-left user-img"><img src="<?php echo base_url() ?>gambar/<?php echo $this->session->userdata('gambar_admin') ?>" class="img-responsive" alt="User"></div>
+                <div class="pull-left user-img"><img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_admin where kd_admin='$kd_admin'")->row()->gambar_admin ?>" class="img-responsive" alt="User"></div>
+              <?php } elseif ($this->session->userdata('posisi') == 'pelamar') { ?>
+                <div class="pull-left user-img"><img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->gambar_pelamar ?>" class="img-responsive" alt="User"></div>
               <?php } else { ?>
-                <div class="pull-left user-img"><img src="<?php echo base_url() ?>assets/img/<?php echo $this->session->userdata('gambar_santri') ?>" class="img-responsive" alt="User"></div>
+                <div class="pull-left user-img"><img src="<?php echo base_url() ?>gambar/<?php echo $this->db->query("select * from tbl_hrd where kd_hrd='$kd_hrd'")->row()->gambar_hrd ?>" class="img-responsive" alt="User"></div>
               <?php } ?>
 
-              <p class="text-left"><?php echo $this->session->userdata('nama') ?>
-                <small>
-                  <?php if ($this->session->userdata('posisi') == 'admin') { ?>
-                    ADMIN
-                  <?php } else {
-                    // $kd_bagian = $this->session->userdata('kd_bagian');
-                    // $nama_bagian = $this->db->query("select nama_bagian from tbl_bagian where kd_bagian='$kd_bagian'")->row()->nama_bagian;
+              <?php if ($this->session->userdata('posisi') == 'admin') { ?>
+                <p class="text-left"><?php echo $this->db->query("select * from tbl_admin where kd_admin='$kd_admin'")->row()->nama_admin ?>
+                  <small> ADMIN </small>
+                </p>
 
-                  ?>
-                    SANTRI
-                  <?php } ?>
+              <?php } elseif ($this->session->userdata('posisi') == 'pelamar') { ?>
+                <p class="text-left"><?php echo $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->nama_pelamar ?>
+                  <small> PELAMAR </small>
+                </p>
+              <?php } else { ?>
+                <p class="text-left"><?php echo $this->db->query("select * from tbl_hrd where kd_hrd='$kd_hrd'")->row()->nama_hrd ?>
+                  <small> HRD </small>
+                </p>
 
-                </small>
+              <?php } ?>
+
+              <p class="text-left">
+                <small> </small>
               </p>
 
             </li>
