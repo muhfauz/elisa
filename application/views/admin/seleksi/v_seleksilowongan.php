@@ -27,10 +27,10 @@
                             <th class="text-center text-white">Nama Lowongan</th>
                             <th class="text-center text-white">Tanggal Tutup</th>
                             <th class="text-center text-white">Status</th>
-                            <th class="text-center text-white">Gambar</th>
+                            <!-- <th class="text-center text-white">Gambar</th> -->
                             <!-- <th class="text-center text-white"></th> -->
-                            <th class="text-center text-white" width="300px"></th>
-                            <th class="text-center text-white" width="0px"></th>
+                            <th class="text-center text-white" width="100 px">Jumlah Pelamar</th>
+                            <th class="text-center text-white" width="50 px"></th>
 
                         </tr>
                     </thead>
@@ -42,17 +42,18 @@
                                 <td class="text-center font-weight-bold"><?php echo $no++; ?></td>
                                 <td><?php echo $a->nama_lowongan ?></td>
                                 <td><?php echo $this->Mglobal->tanggalindo($a->tgl_tutup) ?></td>
-                                <td><?php
-                                    $tglsekarang = date('Y-m-d');
-                                    if ($a->tgl_tutup < $tglsekarang) { ?>
-                                        tutup
+                                <td class="text-center"><?php
+                                                        $tglsekarang = date('Y-m-d');
+                                                        if ($a->tgl_tutup < $tglsekarang) { ?>
+                                        <span class="badge badge-danger text-white ">Tutup</span>
                                     <?php  } else { ?>
-                                        buka
+                                        <span class="badge badge-info text-white">Buka</span>
 
                                     <?php }  ?>
                                 </td>
+                                <td class="text-center"><?php echo $this->db->query("select * from tbl_seleksi where kd_lowongan='$a->kd_lowongan'")->num_rows() ?> orang</td>
 
-                                <td> <img class="img-thumbnail" src=" <?php echo base_url('gambar/') . $a->gambar_lowongan ?>" alt="" width="100" height="100"> </td>
+                                <!-- <td> <img class="img-thumbnail" src=" <?php echo base_url('gambar/') . $a->gambar_lowongan ?>" alt="" width="100" height="100"> </td> -->
                                 <td class="float-right">
 
                                     <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_lowongan ?>"> <i class="fa fa-info mr-2"></i> Detail</a>
