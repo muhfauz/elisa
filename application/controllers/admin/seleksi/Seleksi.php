@@ -16,12 +16,30 @@ class seleksi extends CI_Controller
   function index()
   {
 
+    $data['x1'] = 'Lowongan Aktif';
+    $data['x2'] = 'Lowongan';
+    $data['x3'] = 'Lowongan';
+    $tgl_sekarang = date('Y-m-d');
+    // $data['x4']='Data lowongan Sahabat Optik';
+    $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
+    $data['lowongan'] = $this->db->query("select * from tbl_lowongan where tgl_tutup > '$tgl_sekarang'")->result();
+    // $data['kategori'] = $this->Mglobal->tampilkandata('tbl_kategori');
+    $this->load->view('admin/temp/v_header', $data);
+    $this->load->view('admin/temp/v_atas');
+    $this->load->view('admin/temp/v_sidebar');
+    $this->load->view('admin/seleksi/v_seleksilowongan');
+    $this->load->view('admin/temp/v_footer');
+  }
+  function arsip()
+  {
+
     $data['x1'] = 'Lowongan';
     $data['x2'] = 'Lowongan';
     $data['x3'] = 'Lowongan';
+    $tgl_sekarang = date('Y-m-d');
     // $data['x4']='Data lowongan Sahabat Optik';
     $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
-    $data['lowongan'] = $this->db->query("select * from tbl_lowongan")->result();
+    $data['lowongan'] = $this->db->query("select * from tbl_lowongan where tgl_tutup <='$tgl_sekarang'")->result();
     // $data['kategori'] = $this->Mglobal->tampilkandata('tbl_kategori');
     $this->load->view('admin/temp/v_header', $data);
     $this->load->view('admin/temp/v_atas');
