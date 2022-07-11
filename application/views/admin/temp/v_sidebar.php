@@ -57,7 +57,7 @@
             <li class="ml-4"><a href="<?php echo base_url('admin/berita/berita') ?>"><i class="fa fa-chevron-circle-right mr-2" aria-hidden="true"></i>Perusahaan</a></li>
           </ul>
         </li>
-        <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-2" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+        <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
             <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/tatacara') ?>"> <i class="fa fa-user-o mr-1"></i>Tata Cara Pendaftaran</a></li>
             <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksi') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Daftar Pelamar</a></li>

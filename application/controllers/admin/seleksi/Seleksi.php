@@ -15,17 +15,18 @@ class seleksi extends CI_Controller
 
   function index()
   {
-    $data['x1'] = 'Data Pelamar';
-    $data['x2'] = 'seleksi';
-    $data['x3'] = 'seleksi';
-    $data['judul_bawah'] = 'Daftar Pelamar Mendaftar';
-    // $data['x4']='Data kegiatan Sahabat Optik';
-    $where = array('status_daftar' => 'lengkap');
-    $data['seleksi'] = $this->db->query("select * from tbl_seleksi")->result();
+
+    $data['x1'] = 'Lowongan';
+    $data['x2'] = 'Lowongan';
+    $data['x3'] = 'Lowongan';
+    // $data['x4']='Data lowongan Sahabat Optik';
+    $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
+    $data['lowongan'] = $this->db->query("select * from tbl_lowongan")->result();
+    // $data['kategori'] = $this->Mglobal->tampilkandata('tbl_kategori');
     $this->load->view('admin/temp/v_header', $data);
     $this->load->view('admin/temp/v_atas');
     $this->load->view('admin/temp/v_sidebar');
-    $this->load->view('admin/seleksi/v_seleksi');
+    $this->load->view('admin/seleksi/v_seleksilowongan');
     $this->load->view('admin/temp/v_footer');
   }
   // function baru()
