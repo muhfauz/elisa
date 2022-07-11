@@ -40,14 +40,15 @@
                         foreach ($lowongan as $a) :  ?>
                             <tr>
                                 <td class="text-center font-weight-bold"><?php echo $no++; ?></td>
-                                <td><?php echo $a->nama_lowongan ?></td>
+                                <td>
+                                    <?php echo $a->nama_lowongan ?></td>
                                 <td><?php echo $this->Mglobal->tanggalindo($a->tgl_tutup) ?></td>
                                 <td class="text-center"><?php
                                                         $tglsekarang = date('Y-m-d');
                                                         if ($a->tgl_tutup < $tglsekarang) { ?>
-                                        <span class="badge badge-danger text-white ">Tutup</span>
+                                        <span class="badge badge-danger text-white "><i class="fa fa-times-circle mr-1" aria-hidden="true"></i>Tutup</span>
                                     <?php  } else { ?>
-                                        <span class="badge badge-info text-white">Buka</span>
+                                        <span class="badge badge-primary text-white"><i class="fa fa-check-square mr-1" aria-hidden="true"></i>Buka</span>
 
                                     <?php }  ?>
                                 </td>
