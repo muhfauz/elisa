@@ -87,6 +87,7 @@ class Depan extends CI_Controller
 				'username_pelamar' => $this->input->post('username_pelamar'),
 				'alamat_pelamar' => $this->input->post('alamat_pelamar'),
 				'nohp_pelamar' => $this->input->post('nohp_pelamar'),
+				'tglregister_pelamar' => date('Y-m-d'),
 				// 'status_pelamar' => $this->input->post('status_pelamar'),
 				'gambar_pelamar' => 'pelamar.png',
 				'password_pelamar' => md5($this->input->post('password_pelamar'))

@@ -50,12 +50,20 @@
                 <table id="example1" class="table table-bordered table-striped table-hover">
                     <thead class="bg-aqua">
                         <tr>
-                            <th class="text-center text-white" width="10px">No</th>
-                            <th class="text-center text-white">Nama seleksi</th>
-                            <th class="text-center text-white">Tempat, Tanggal Lahir</th>
-                            <th class="text-center text-white">Akte</th>
-                            <th class="text-center text-white">KK</th>
-                            <th class="text-center text-white">Keterangan</th>
+                            <th class="text-center text-white align-middle" width="10px">No</th>
+                            <th class="text-center text-white align-middle">Nama Pelamar</th>
+                            <th class="text-center text-white align-middle">Tempat, Tanggal Lahir</th>
+                            <th class="text-center text-white align-middle">Surat Lamaran</th>
+                            <th class="text-center text-white align-middle">CV</th>
+                            <th class="text-center text-white align-middle">Ijazah</th>
+                            <th class="text-center text-white align-middle">SKCK</th>
+                            <th class="text-center text-white align-middle">Surat Dokter</th>
+                            <th class="text-center text-white align-middle">Vaksin 2</th>
+                            <th class="text-center text-white align-middle">Swab</th>
+                            <th class="text-center text-white align-middle">KTP</th>
+                            <th class="text-center text-white align-middle">KK</th>
+                            <th class="text-center text-white align-middle">Sertifikat</th>
+                            <th class="text-center text-white align-middle">Keterangan</th>
                             <!-- <th class="text-center text-white">Foto</th> -->
                             <th class="text-center text-white" width="300px"></th>
 
@@ -67,30 +75,78 @@
                         foreach ($seleksi as $a) :  ?>
                             <tr>
                                 <td class="text-center font-weight-bold"><?php echo $no++; ?></td>
-                                <td><?php echo $a->nama_seleksi ?></td>
+                                <td><?php echo $a->nama_pelamar ?></td>
 
                                 <td><?php
-                                    echo $a->tempat_lahir . ', ' . $this->Mglobal->tanggalindo($a->tgl_lahir);
+                                    echo $a->tempatlahir_pelamar . ', ' . $this->Mglobal->tanggalindo($a->tgllahir_pelamar);
 
                                     ?></td>
 
                                 <!-- <td><img src="<?php echo base_url('assets/toko/images/seleksi/') . $a->foto_seleksi ?>" alt=""> -->
                                 </td>
-                                <td><?php if ($a->akte_seleksi <> "") { ?>
-                                        <a href="<?php echo base_url() ?>assets/img/<?php echo $a->akte_seleksi ?>">
+                                <td><?php if ($a->surat_lamaran <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->surat_lamaran ?>">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
                                         </a>
                                     <?php } ?>
                                 </td>
-                                <td><?php if ($a->kk_seleksi <> "") { ?>
-                                        <a href="<?php echo base_url() ?>assets/img/<?php echo $a->kk_seleksi ?>">
+                                <td><?php if ($a->form_cv <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->form_cv ?>">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
                                         </a>
                                     <?php } ?>
                                 </td>
-                                <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->status_daftar  ?></span></td>
+                                <td><?php if ($a->fc_ijazah <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_skck <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_suratketdokter <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_vaksin2 <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_vaksin2 ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_swab <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_swab ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_ktp <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_ktp ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_kk <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_kk ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_sertifikat <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_sertifikat ?>">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    <?php } ?>
+                                </td>
+                                <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_admin  ?></span></td>
                                 <td class="float-right">
-                                    <?php if ($a->status_daftar == "lengkap") { ?>
+                                    <?php if ($a->ket_admin == "lengkap") { ?>
                                         <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
                                         <a href="" class="btn btn-info btn-sm mb-1" data-toggle="modal" data-target="#terimadata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-edit mr-2"></i> Terima seleksi</a>
                                         <a href="" class="btn btn-danger btn-sm mb-1" data-toggle="modal" data-target="#tolakdata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-trash mr-2"></i> Tolak seleksi</a>
