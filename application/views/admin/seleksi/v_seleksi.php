@@ -146,13 +146,13 @@
                                 </td>
                                 <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_admin  ?></span></td>
                                 <td class="float-right">
-                                    <?php if ($a->ket_admin == "lengkap") { ?>
+                                    <?php if ($a->ket_admin == "belum") { ?>
                                         <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
                                         <a href="" class="btn btn-info btn-sm mb-1" data-toggle="modal" data-target="#terimadata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-edit mr-2"></i> Terima seleksi</a>
                                         <a href="" class="btn btn-danger btn-sm mb-1" data-toggle="modal" data-target="#tolakdata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-trash mr-2"></i> Tolak seleksi</a>
-                                    <?php } elseif ($a->status_daftar == "diterima") { ?>
+                                    <?php } elseif ($a->ket_admin == "tolak") { ?>
                                         <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
-                                    <?php } elseif ($a->status_daftar == "ditolak") { ?>
+                                    <?php } elseif ($a->ket_admin == "terima") { ?>
                                         <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
                                     <? } else { ?>
 
@@ -260,73 +260,52 @@
                 <div class="modal-body">
                     <table class="table table-borderless">
                         <tr>
-                            <th>Hari </th>
-                            <td><?php echo $a->nama_seleksi ?></td>
+                            <th>Nama Pelamar </th>
+                            <td><?php echo $a->nama_pelamar ?></td>
                         </tr>
                         <tr>
                             <th>Tempat Tanggal Lahir </th>
-                            <td><?php echo $a->tempat_lahir . ', ' . $this->Mglobal->tanggalindo($a->tgl_lahir) ?></td>
+                            <td><?php echo $a->tempatlahir_pelamar . ', ' . $this->Mglobal->tanggalindo($a->tgllahir_pelamar) ?></td>
                         </tr>
                         <tr>
                             <th>Jenis Kelamin </th>
-                            <td><?php echo $a->jk_seleksi ?></td>
+                            <td><?php echo $a->jk_pelamar ?></td>
                         </tr>
                         <tr>
                             <th>Alamat </th>
-                            <td><?php echo $a->alamat_seleksi ?></td>
+                            <td><?php echo $a->alamat_pelamar ?></td>
                         </tr>
                         <tr>
-                            <th>Anak ke </th>
-                            <td><?php echo $a->anak_ke ?></td>
+                            <th>No HP Pelamar </th>
+                            <td><?php echo $a->nohp_pelamar ?></td>
                         </tr>
                         <tr>
-                            <th>Jumlah Saudara </th>
-                            <td><?php echo $a->jumlah_saudara ?></td>
-                        </tr>
-
-                        <tr>
-                            <th>Nama orang tua </th>
-                            <td><?php echo $a->nama_orangtua ?></td>
-                        </tr>
-                        <tr>
-                            <th>Pekerjaan orang tua </th>
-                            <td><?php echo $a->pekerjaan_orangtua ?></td>
-                        </tr>
-                        <tr>
-                            <th>Agama Orang Tua </th>
-                            <td><?php echo $a->agama_orangtua ?></td>
-                        </tr>
-                        <tr>
-                            <th>Nama Wali </th>
-                            <td><?php echo $a->nama_wali ?></td>
-                        </tr>
-                        <tr>
-                            <th>Pekerjaan Wali </th>
-                            <td><?php echo $a->pekerjaan_wali ?></td>
+                            <th>Pendidikan Terakhir </th>
+                            <td><?php echo $a->pendidikan_pelamar ?></td>
                         </tr>
 
-                        <!-- <tr>
-                            <th>KK seleksi </th>
-                            <td><?php if ($a->kk_seleksi <> "") { ?>
-                                    <a href="<?php echo base_url() ?>assets/img/<?php echo $a->kk_seleksi ?>">
-                                        <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                    </a>
-                                <?php } ?>
-                            </td>
+                        <tr>
+                            <th>Tanggal Register </th>
+                            <td><?php echo $this->Mglobal->tanggalindo($a->tglregister_pelamar) ?></td>
                         </tr>
                         <tr>
-                            <th>Akte seleksi </th>
-                            <td><?php if ($a->akte_seleksi <> "") { ?>
-                                    <a href="<?php echo base_url() ?>assets/img/<?php echo $a->akte_seleksi ?>">
-                                        <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                    </a>
-                                <?php } ?>
-                            </td>
-                        </tr> -->
+                            <th>Tanggal Melamar </th>
+                            <td><?php echo $this->Mglobal->tanggalindo($a->tgl_seleksi) ?></td>
+                        </tr>
                         <tr>
-                            <th>Foto seleksi</th>
+                            <th>Status Admin</th>
+                            <td><?php echo $a->ket_admin ?></td>
+                        </tr>
+                        <tr>
+                            <th>Status HRD </th>
+                            <td><?php echo $a->ket_hrd ?></td>
+                        </tr>
+
+
+                        <tr>
+                            <th>Foto Pelamar</th>
                             <td>
-                                <img height="100" width="100" src="<?php echo base_url('assets/img/') . $a->foto_seleksi ?>" alt="">
+                                <img height="100" width="100" src="<?php echo base_url('gambar/') . $a->gambar_pelamar ?>" alt="">
                             </td>
                         </tr>
 
@@ -358,11 +337,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?php echo base_url('admin/seleksi/seleksi/tolakseleksi') ?>" method="post">
+                    <form action="<?php echo base_url('admin/seleksi/seleksi/tolakpelamar') ?>" method="post">
                         <div class="form-group">
-                            Apakah Anda Yakin akan Menolak seleksi ini? <br>
+                            Apakah Anda Yakin akan Menolak Seleksi Pelamar ini? <br>
                             <label for="">Alasan :</label>
-                            <input name="alasan_alasan" type="text" class="form-control" required>
+                            <input name="alasan_admin" type="text" class="form-control" required>
                             <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
                         </div>
 
@@ -390,11 +369,11 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?php echo base_url('admin/seleksi/seleksi/terimaseleksi') ?>" method="post">
+                    <form action="<?php echo base_url('admin/seleksi/seleksi/terimapelamar') ?>" method="post">
                         <div class="form-group">
-                            Apakah Anda Yakin akan Menerima seleksi ini? <br>
+                            Apakah Pelamar ini ikut ke Tahap Seleksi Selanjutnya? <br>
                             <label for="">Alasan :</label>
-                            <input name="alasan_alasan" type="text" class="form-control" required>
+                            <input name="alasan_admin" type="text" class="form-control" required>
                             <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
                         </div>
 

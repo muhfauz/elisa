@@ -157,41 +157,41 @@ class seleksi extends CI_Controller
   // $this->load->view('kegiatan/temp/v_footer');
   // }
   // }
-  function tolaksantri()
+  function tolakpelamar()
   {
-    $where = array('kd_santri' => $this->input->post('kd_santri'));
+    $where = array('kd_pelamar' => $this->input->post('kd_pelamar'));
     $data = array(
-      'alasan_terima' => $this->input->post('alasan_terima'),
-      'status_daftar' => 'ditolak',
-      'status_santri' => 'selesai',
-      'tgl_diterima' => date('Y-m-d'),
+      'alasan_admin' => $this->input->post('alasan_admin'),
+      'ket_admin' => 'tolak',
+      'kd_admin' => $this->session->userdata('kd_admin'),
+      'tglseleksi_admin' => date('Y-m-d'),
     );
-    $this->Mglobal->editdata('tbl_santri', $where, $data);
+    $this->Mglobal->editdata('tbl_seleksi', $where, $data);
     $this->session->set_flashdata('pesan', '<div class="alert alert-danger alert-dismissible fade show" role="alert">
             <strong>Santri Ditolak!</strong> Data berhasil diupdate di database.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>');
-    redirect(base_url('admin/seleksi/seleksi/'));
+    redirect(base_url('admin/seleksi/seleksi/lihat'));
   }
-  function terimasantri()
+  function terimapelamar()
   {
-    $where = array('kd_santri' => $this->input->post('kd_santri'));
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
     $data = array(
-      'alasan_terima' => $this->input->post('alasan_terima'),
-      'status_daftar' => 'diterima',
-      'status_santri' => 'selesai',
-      'tgl_diterima' => date('Y-m-d'),
+      'alasan_admin' => $this->input->post('alasan_admin'),
+      'ket_admin' => 'terima',
+      'kd_admin' => $this->session->userdata('kd_admin'),
+      'tglseleksi_admin' => date('Y-m-d'),
     );
-    $this->Mglobal->editdata('tbl_santri', $where, $data);
+    $this->Mglobal->editdata('tbl_seleksi', $where, $data);
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
             <strong>Santri Diterima!</strong> Data berhasil diupdate di database.
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>');
-    redirect(base_url('admin/seleksi/seleksi/'));
+    redirect(base_url('admin/seleksi/seleksi/lihat'));
   }
   function editkegiatan($id)
   {
