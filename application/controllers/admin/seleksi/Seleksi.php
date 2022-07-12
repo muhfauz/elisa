@@ -50,13 +50,17 @@ class seleksi extends CI_Controller
   function lihat()
   {
 
-    $data['x1'] = 'Lowongan';
+    $kd_lowongan = $this->input->post('kd_lowongan');
+    $data['x1'] = 'Data Pelamar ' . $this->db->query("select * from tbl_lowongan where kd_lowongan='$kd_lowongan'")->row()->nama_lowongan;;
     $data['x2'] = 'Lowongan';
     $data['x3'] = 'Lowongan';
     $data['judul_bawah'] = 'Lowongan';
     $tgl_sekarang = date('Y-m-d');
     // $data['x4']='Data lowongan Sahabat Optik';
-    $kd_lowongan = $this->input->post('kd_lowongan');
+
+    $data['nama_lowongan']  = $this->db->query("select * from tbl_lowongan where kd_lowongan='$kd_lowongan'")->row()->nama_lowongan;
+    $data['tgl_tutup']  = $this->Mglobal->tanggalindo($this->db->query("select * from tbl_lowongan where kd_lowongan='$kd_lowongan'")->row()->tgl_tutup);
+    $data['jumlah_pelamar']  = $this->db->query("select * from tbl_seleksi where kd_lowongan='$kd_lowongan'")->num_rows();
     $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
     $data['seleksi'] = $this->db->query("select * from tbl_seleksi where kd_lowongan='$kd_lowongan'")->result();
     // $data['kategori'] = $this->Mglobal->tampilkandata('tbl_kategori');

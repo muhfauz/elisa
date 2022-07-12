@@ -16,7 +16,34 @@
 
         <div class="info-box">
             <h4 class="text-primary"><i class="fa fa-user"></i> <?php echo $x1; ?></h4>
-            <p><?php echo $judul_bawah; ?></p>
+            <p><?php echo $nama_perush; ?></p>
+            <div class="row ml-1 mr-1 mt-3 bg-aqua">
+                <div class="col sm-1 mt-2 ml-2 mr-2">
+                    <!-- <form class="form" action="<?php echo base_url('admin/transaksi/penjualan/simpanpenjualan') ?>" method="POST"> -->
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Nama Lowongan</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input class="form-control text-left" name="kd_penjualan" id="kd_penjualan" placeholder="No Tranaksi" type="text" readonly value="<?php echo $nama_lowongan ?>" required>
+                                <div class="input-group-addon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="exampleInputEmail3" class="col-sm-3 control-label">Deadline Lowongan </label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+
+                                <input class="form-control text-left" id="namaoutlet" placeholder="Nama outlet" type="text" value="<?php echo $tgl_tutup ?>" readonly>
+                                <div class="input-group-addon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
             <div class="table-responsive">
                 <?php echo $this->session->userdata('pesan'); ?>
                 <!-- <a href="" class="btn btn-primary bg-aqua-gradient mb-2" data-toggle="modal" data-target="#tambahdata"> <i class="fa fa-plus-square mr-2"></i> Tambah Data</a> -->
@@ -81,6 +108,23 @@
                         <?php endforeach ?>
 
                 </table>
+            </div>
+            <div class="row ml-1 mr-1 mt-3 bg-aqua">
+                <div class="col sm-1 mt-2 ml-2 mr-2">
+                    <!-- <form class="form" action="<?php echo base_url('admin/transaksi/penjualan/simpanpenjualan') ?>" method="POST"> -->
+                    <div class="form-group row">
+                        <label for="exampleInputuname3" class="col-sm-3 control-label">Total Pelamar</label>
+                        <div class="col-sm-9">
+                            <div class="input-group">
+                                <input class="form-control text-right" name="kd_penjualan" id="kd_penjualan" placeholder="No Tranaksi" type="text" readonly value="<?php echo $jumlah_pelamar ?> orang" required>
+                                <div class="input-group-addon"><i class="fa fa-check" aria-hidden="true"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+
             </div>
         </div>
     </div>
