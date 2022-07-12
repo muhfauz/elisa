@@ -47,21 +47,26 @@ class seleksi extends CI_Controller
     $this->load->view('admin/seleksi/v_seleksilowongan');
     $this->load->view('admin/temp/v_footer');
   }
-  // function baru()
-  // {
-  //   $data['x1'] = 'Data seleksi';
-  //   $data['x2'] = 'seleksi';
-  //   $data['x3'] = 'seleksi';
-  //   $data['judul_bawah'] = 'Daftar Santri Baru Mendaftar';
-  //   // $data['x4']='Data kegiatan Sahabat Optik';
-  //   $where = array('status_daftar' => '');
-  //   $data['santri'] = $this->Mglobal->tampilkandatasingle('tbl_santri', $where);
-  //   $this->load->view('admin/temp/v_header', $data);
-  //   $this->load->view('admin/temp/v_atas');
-  //   $this->load->view('admin/temp/v_sidebar');
-  //   $this->load->view('admin/seleksi/v_seleksi');
-  //   $this->load->view('admin/temp/v_footer');
-  // }
+  function lihat()
+  {
+
+    $data['x1'] = 'Lowongan';
+    $data['x2'] = 'Lowongan';
+    $data['x3'] = 'Lowongan';
+    $data['judul_bawah'] = 'Lowongan';
+    $tgl_sekarang = date('Y-m-d');
+    // $data['x4']='Data lowongan Sahabat Optik';
+    $kd_lowongan = $this->input->post('kd_lowongan');
+    $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
+    $data['seleksi'] = $this->db->query("select * from tbl_seleksi where kd_lowongan='$kd_lowongan'")->result();
+    // $data['kategori'] = $this->Mglobal->tampilkandata('tbl_kategori');
+    $this->load->view('admin/temp/v_header', $data);
+    $this->load->view('admin/temp/v_atas');
+    $this->load->view('admin/temp/v_sidebar');
+    $this->load->view('admin/seleksi/v_seleksi');
+    $this->load->view('admin/temp/v_footer');
+  }
+
 
   function diterima()
   {

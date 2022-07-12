@@ -59,24 +59,12 @@
         </li>
         <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/tatacara') ?>"> <i class="fa fa-user-o mr-1"></i>Tata Cara Pendaftaran</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksi') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Daftar Pelamar</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/pendaftaran/diterima') ?>"> <i class="fa fa-user-o mr-1"></i>Diterima</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/pendaftaran/ditolak') ?>"> <i class="fa fa-user-o mr-1"></i>Ditolak</a></li>
-            <!-- <li class="ml-4"><a href="<?php echo base_url('admin/pendaftaran/pendaftaran') ?>"> <i class="fa fa-safari mr-1"></i>Siswa</a></li> -->
-
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksi') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lowongan</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksi/arsip') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Recruitmen</a></li>
 
           </ul>
         </li>
-        <!-- <li class="header">Transaksi</li> -->
-        <!-- <li class="treeview"> <a href="#"><i class="fa fa-bullseye mr-2"></i><span>Penyewaan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
-        <ul class="treeview-menu">
-          <li class="ml-4"><a href="<?php echo base_url('admin/transaksi/penyewaan/baru') ?>"> <i class="fa fa-plus-circle" aria-hidden="true"></i>Penyewaan Baru</a></li>
-          <li class="ml-4"><a href="<?php echo base_url('admin/master/admin') ?>"> <i class="fa fa-shower" aria-hidden="true"></i>Jasa</a></li>
-          <li class="ml-4"><a href="<?php echo base_url('admin/master/admin') ?>"> <i class="fa fa-ravelry" aria-hidden="true"></i>Paket Wedding</a></li>
 
-        </ul>
-      </li> -->
         <li class="treeview"> <a href="#"><i class="fa fa-cc-diners-club mr-2" aria-hidden="true"></i><span>Deskripsi</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
 

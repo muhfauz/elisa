@@ -21,7 +21,7 @@
                 <?php echo $this->session->userdata('pesan'); ?>
                 <!-- <a href="" class="btn btn-primary bg-aqua-gradient mb-2" data-toggle="modal" data-target="#tambahdata"> <i class="fa fa-plus-square mr-2"></i> Tambah Data</a> -->
                 <table id="example1" class="table table-bordered table-striped table-hover">
-                    <thead class="bg-aqua-gradient">
+                    <thead class="bg-aqua">
                         <tr>
                             <th class="text-center text-white" width="10px">No</th>
                             <th class="text-center text-white">Nama seleksi</th>
