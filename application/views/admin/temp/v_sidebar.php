@@ -51,10 +51,10 @@
 
           </ul>
         </li>
-        <li class="treeview"> <a href="#"><i class="fa fa-life-ring mr-2" aria-hidden="true"></i><span>Lowongan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+        <li class="treeview"> <a href="#"><i class="fa fa-life-ring mr-2" aria-hidden="true"></i><span>Update Lowongan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
             <li class="ml-4"><a href="<?php echo base_url('admin/lowongan/lowongan') ?>"><i class="fa fa-chevron-circle-right mr-2" aria-hidden="true"></i>Lowongan</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/berita/berita') ?>"><i class="fa fa-chevron-circle-right mr-2" aria-hidden="true"></i>Perusahaan</a></li>
+
           </ul>
         </li>
         <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>

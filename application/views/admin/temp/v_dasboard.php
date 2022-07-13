@@ -5,8 +5,6 @@
     <?php if ($this->session->userdata('posisi') == 'admin') { ?>
       <h4 class="fa fa-home" aria-hidden="true"> Selamat Datang, <?php echo $this->session->userdata('nama'); ?> [ADMIN]</h4>
     <?php } else {
-      // $kd_bagian = $this->session->userdata('kd_bagian');
-      // $nama_bagian = $this->db->query("select nama_bagian from tbl_bagian where kd_bagian='$kd_bagian'")->row()->nama_bagian;
 
     ?>
 
@@ -77,7 +75,21 @@
         <!-- /.col -->
 
         <!-- /.col -->
+
+        <?php
+        $kd_pelamar = $this->session->userdata('kd_pelamar');
+        if ($this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->jk_pelamar == '' or $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->pendidikan_pelamar == '') { ?>
+
+          <div class="alert alert-danger alert-dismissible fade show col-lg-3 col-xs-6 ml-2" role="alert">
+            <strong>Peringatan!</strong> Anda harus melengkapi data diri
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+        <?php } ?>
         <div class="col-lg-3 col-xs-6">
+
+
           <a href="<?php echo base_url('admin/pendaftaran/jadwal') ?>">
             <div class="info-box"> <span class="info-box-icon bg-blue"><i class="fa fa-calendar-check-o text-white" aria-hidden="true"></i></span>
               <div class="info-box-content"> <span class="info-box-number "> Jadwal</span> <span class="info-box-text">Pendaftaran</span></div>
@@ -86,6 +98,7 @@
             <!-- /.info-box -->
           </a>
         </div>
+
         <div class="col-lg-3 col-xs-6">
           <a href="<?php echo base_url('admin/pendaftaran/datasantri') ?>">
             <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-graduation-cap text-white" aria-hidden="true"></i></span>
