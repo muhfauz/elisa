@@ -61,6 +61,7 @@
                             <th class="text-center text-white align-middle">KTP</th>
                             <th class="text-center text-white align-middle">KK</th>
                             <th class="text-center text-white align-middle">Sertifikat</th>
+                            <th class="text-center text-white align-middle">SIM</th>
                             <th class="text-center text-white align-middle">Keterangan</th>
                             <!-- <th class="text-center text-white">Foto</th> -->
                             <!-- <th class="text-center text-white" width="300px"></th> -->

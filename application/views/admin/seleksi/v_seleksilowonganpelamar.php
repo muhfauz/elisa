@@ -27,9 +27,17 @@
                             <th class="text-center text-white align-middle">Nama Lowongan</th>
                             <th class="text-center text-white align-middle">Tanggal Tutup</th>
                             <th class="text-center text-white align-middle">Seleksi Administrasi</th>
+                            <?php
+                            $kd_pelamar = $this->session->userdata('kd_pelamar');
+                            $ket_admin = $this->db->query("select * from tbl_seleksi where kd_pelamar='$kd_pelamar'")->row()->ket_admin;
+                            if ($ket_admin == 'terima') { ?>
+                                <th class="text-center text-white align-middle" width="100 px">Soal Psikotes</th>
+                                <th class="text-center text-white align-middle" width="100 px">Upload Jawaban </th>
+                                <th class="text-center text-white align-middle" width="100 px">Hasil Psikotes</th>
+                            <?php } ?>
                             <!-- <th class="text-center text-white">Gambar</th> -->
                             <!-- <th class="text-center text-white"></th> -->
-                            <th class="text-center text-white" width="100 px">Hasil Psikotes</th>
+
                             <th class="text-center text-white" width="50 px"></th>
 
                         </tr>
@@ -45,30 +53,43 @@
                                 <td><?php echo $this->Mglobal->tanggalindo($a->tgl_tutup) ?></td>
 
                                 <td class="text-center">
-                                    <?php if ($a->ket_admin = 'belum') { ?>
+                                    <?php if ($a->ket_admin == 'belum') { ?>
                                         <button class="btn btn-info btn-sm">Berkas belum dicek</button>
-                                    <?php } elseif ($a->ket_admin = 'tolak') { ?>
-                                        <button class="btn btn-danger btn-sm">Tidak Lolos Administrasi</button>
+                                    <?php } elseif ($a->ket_admin == 'tolak') { ?>
+                                        <button class="btn btn-danger btn-sm"><i class="fa fa-times-circle mr-1" aria-hidden="true"></i>Tidak Lolos Administrasi</button>
                                     <?php } else { ?>
-                                        <button class="btn btn-primary btn-sm">Diterima</button>
-                                    <?php                               }  ?>
+                                        <button class="btn btn-primary btn-sm"><i class="fa fa-check mr-1" aria-hidden="true"></i>Berkas lengkap</button>
+                                    <?php }  ?>
                                 </td>
-                                <td class="text-center">
-
-                                    <!-- <button class="btn btn-danger btn-sm"> Tidak Lolos Administrasi</button> -->
-                                    <?php if ($a->ket_admin = 'tolak') { ?>
-                                        <button class="btn btn-danger btn-sm"> Tidak Lolos Administrasi</button>
-                                    <?php } ?>
-                                    <?php if ($a->ket_admin = 'terima') { ?>
-                                        <?php if ($a->ket_hrd = 'belum') { ?>
-                                            <button class="btn btn-info btn-sm">Menunggu</button>
-                                        <?php } elseif ($a->ket_admin = 'tolak') { ?>
-                                            <button class="btn btn-danger btn-sm">Tidak Lolos</button>
+                                <?php if ($ket_admin == 'terima') { ?>
+                                    <td class="text-center">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->data_psikotes ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        </a>
+                                    </td>
+                                    <td class="text-center">
+                                        <?php if ($a->jawaban_psikotes <> "") { ?>
+                                            <a href="<?php echo base_url() ?>berkas/<?php echo $a->jawaban_psikotes ?>" target="_blank">
+                                                <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                            </a>
+                                            <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadjawaban<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
                                         <?php } else { ?>
-                                            <button class="btn btn-primary btn-sm">Diterima</button>
-                                        <?php    }  ?>
-                                    <?php  }  ?>
-                                </td>
+                                            <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadjawaban<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                                        <?php  } ?>
+
+                                    </td>
+                                    <td class="text-center">
+                                        <?php if ($a->ket_hrd == 'belum') { ?>
+                                            <button class="btn btn-info btn-sm">jawaban belum dicek</button>
+                                        <?php } elseif ($a->ket_hrd == 'tolak') { ?>
+                                            <button class="btn btn-danger btn-sm"><i class="fa fa-times-circle mr-1" aria-hidden="true"></i>Anda Ditolak, Point Tidak Memenuhi </button>
+                                        <?php } else { ?>
+                                            <button class="btn btn-primary btn-sm"><i class="fa fa-check mr-1" aria-hidden="true"></i>Diterima</button>
+                                        <?php }  ?>
+
+                                    </td>
+                                <?php }  ?>
 
                                 <!-- <td> <img class="img-thumbnail" src=" <?php echo base_url('gambar/') . $a->gambar_lowongan ?>" alt="" width="100" height="100"> </td> -->
                                 <td class="float-right">
@@ -275,6 +296,41 @@
                     CKEDITOR.replace('isi_lowongan2');
                 </script>
 
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload jawaban -->
+<!-- upload cv -->
+<?php foreach ($lowongan as $a) : ?>
+    <div class="modal fade" id="uploadjawaban<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadjawaban') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Jawaban PsikoTes :</label>
+                            <input name="jawaban_psikotes" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>
