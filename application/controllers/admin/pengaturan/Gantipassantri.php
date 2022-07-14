@@ -26,7 +26,7 @@ class Gantipassantri extends CI_Controller
     $this->load->view('admin/temp/v_header', $data);
     $this->load->view('admin/temp/v_atas');
     $this->load->view('admin/temp/v_sidebar');
-    $this->load->view('admin/pengaturan/v_gantipassantri');
+    $this->load->view('admin/pengaturan/v_gantipasspelamar');
     $this->load->view('admin/temp/v_footer');
   }
   function tambahadmin()

@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header sty-one">
-        <h1 class="text-black"><?php echo $x1 ?></h1>
+        <h1 class="text-black"><i class="fa fa-user mr-2" aria-hidden="true"></i><?php echo $x1 ?></h1>
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li class="sub-bread"><i class="fa fa-angle-right"></i> <?php echo $x2 ?></li>
