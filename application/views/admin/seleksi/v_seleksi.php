@@ -88,62 +88,62 @@
                                 <!-- <td><img src="<?php echo base_url('assets/toko/images/seleksi/') . $a->foto_seleksi ?>" alt=""> -->
                                 </td>
                                 <td><?php if ($a->surat_lamaran <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->surat_lamaran ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->surat_lamaran ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->form_cv <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->form_cv ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->form_cv ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_ijazah <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_skck <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_suratketdokter <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_vaksin2 <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_vaksin2 ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_vaksin2 ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_swab <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_swab ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_swab ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_ktp <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_ktp ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_ktp ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_kk <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_kk ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_kk ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_sertifikat <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_sertifikat ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_sertifikat ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
@@ -378,6 +378,7 @@
                             <label for="">Alasan :</label>
                             <input name="alasan_admin" type="text" class="form-control" required>
                             <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
                         </div>
 
 

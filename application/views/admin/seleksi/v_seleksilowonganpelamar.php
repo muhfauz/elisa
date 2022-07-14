@@ -54,18 +54,19 @@
                                     <?php                               }  ?>
                                 </td>
                                 <td class="text-center">
-                                    <?php if ($a->ket_admin = 'belum') { ?>
-                                        <!-- <button class="btn btn-danger btn-sm"> Tidak Lolos Administrasi</button> -->
-                                    <?php } elseif ($a->ket_admin = 'tolak') { ?>
+
+                                    <!-- <button class="btn btn-danger btn-sm"> Tidak Lolos Administrasi</button> -->
+                                    <?php if ($a->ket_admin = 'tolak') { ?>
                                         <button class="btn btn-danger btn-sm"> Tidak Lolos Administrasi</button>
-                                    <?php } else { ?>
+                                    <?php } ?>
+                                    <?php if ($a->ket_admin = 'terima') { ?>
                                         <?php if ($a->ket_hrd = 'belum') { ?>
                                             <button class="btn btn-info btn-sm">Menunggu</button>
                                         <?php } elseif ($a->ket_admin = 'tolak') { ?>
                                             <button class="btn btn-danger btn-sm">Tidak Lolos</button>
                                         <?php } else { ?>
                                             <button class="btn btn-primary btn-sm">Diterima</button>
-                                        <?php            }  ?>
+                                        <?php    }  ?>
                                     <?php  }  ?>
                                 </td>
 
