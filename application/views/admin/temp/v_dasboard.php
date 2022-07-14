@@ -71,22 +71,25 @@
 
       <!-- apoteker -->
       <div class="row">
-
-        <!-- /.col -->
-
-        <!-- /.col -->
-
         <?php
         $kd_pelamar = $this->session->userdata('kd_pelamar');
-        if ($this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->jk_pelamar == '' or $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->pendidikan_pelamar == '') { ?>
+        if ($this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->jk_pelamar == '' or $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->pendidikan_pelamar == '' or $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->agama_pelamar == '') { ?>
 
-          <div class="alert alert-danger alert-dismissible fade show col-lg-3 col-xs-6 ml-2" role="alert">
+          <div class="alert alert-danger alert-dismissible fade show col-lg- col-xs-6 ml-2" role="alert">
             <strong>Peringatan!</strong> Anda harus melengkapi data diri
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
         <?php } ?>
+      </div>
+      <div class="row">
+
+        <!-- /.col -->
+
+        <!-- /.col -->
+
+
         <div class="col-lg-3 col-xs-6">
 
 
