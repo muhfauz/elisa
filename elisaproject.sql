@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2022 at 08:32 AM
+-- Generation Time: Jul 14, 2022 at 12:21 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -43,7 +43,7 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`kd_admin`, `nama_admin`, `username_admin`, `password_admin`, `gambar_admin`, `alamat_admin`, `nohp_admin`, `status_admin`) VALUES
-('ADM001', 'Bp.Kyai Ngizudin', 'ADM001', 'e10adc3949ba59abbe56e057f20f883e', 'adm_1657406829.png', 'Suro', '085742906467', 'admin');
+('ADM001', 'adasfasdfadsfasdf', 'ADM001', 'e10adc3949ba59abbe56e057f20f883e', 'adm_1657406829.png', 'Suro', '085742906467', 'admin');
 
 -- --------------------------------------------------------
 
@@ -295,22 +295,23 @@ CREATE TABLE `tbl_pelamar` (
   `nama_pelamar` varchar(30) NOT NULL,
   `tempatlahir_pelamar` varchar(30) NOT NULL,
   `tgllahir_pelamar` date NOT NULL,
-  `jk_pelamar` varchar(10) NOT NULL,
+  `jk_pelamar` enum('L','P') NOT NULL,
   `nohp_pelamar` varchar(15) NOT NULL,
   `alamat_pelamar` varchar(50) NOT NULL,
   `username_pelamar` varchar(20) NOT NULL,
   `password_pelamar` varchar(50) NOT NULL,
   `gambar_pelamar` varchar(30) NOT NULL,
   `tglregister_pelamar` date NOT NULL,
-  `pendidikan_pelamar` varchar(20) NOT NULL
+  `pendidikan_pelamar` enum('sma','d3','s1','s2') NOT NULL,
+  `agama_pelamar` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tbl_pelamar`
 --
 
-INSERT INTO `tbl_pelamar` (`kd_pelamar`, `nama_pelamar`, `tempatlahir_pelamar`, `tgllahir_pelamar`, `jk_pelamar`, `nohp_pelamar`, `alamat_pelamar`, `username_pelamar`, `password_pelamar`, `gambar_pelamar`, `tglregister_pelamar`, `pendidikan_pelamar`) VALUES
-('PEL001', 'Sutrisno', 'Banyumas', '2012-07-11', '', '082135644333', 'Purwokerto', 'PEL001', 'e10adc3949ba59abbe56e057f20f883e', 'pelamar.png', '2022-07-05', '');
+INSERT INTO `tbl_pelamar` (`kd_pelamar`, `nama_pelamar`, `tempatlahir_pelamar`, `tgllahir_pelamar`, `jk_pelamar`, `nohp_pelamar`, `alamat_pelamar`, `username_pelamar`, `password_pelamar`, `gambar_pelamar`, `tglregister_pelamar`, `pendidikan_pelamar`, `agama_pelamar`) VALUES
+('PEL001', 'Sutrisno', 'Banyumas', '2000-07-07', 'L', '082135644333', 'Purwokerto', 'PEL001', 'e10adc3949ba59abbe56e057f20f883e', 'adm_1657701637.png', '2022-07-05', 'd3', 'Islam');
 
 -- --------------------------------------------------------
 
@@ -498,7 +499,7 @@ CREATE TABLE `tbl_seleksi` (
 --
 
 INSERT INTO `tbl_seleksi` (`kd_seleksi`, `tgl_seleksi`, `kd_pelamar`, `kd_lowongan`, `surat_lamaran`, `form_cv`, `fc_ktp`, `fc_kk`, `fc_sim`, `fc_ijazah`, `fc_skck`, `fc_suratketdokter`, `fc_vaksin2`, `fc_swab`, `fc_sertifikat`, `data_psikotes`, `kd_admin`, `ket_admin`, `alasan_admin`, `tglseleksi_admin`, `kd_hrd`, `ket_hrd`) VALUES
-('SEL001', '2022-07-13', 'PEL001', 'BER003', '', '', '', '', '', '', '', '', '', '', '', 'psikotest.pdf', '', 'belum', '', '0000-00-00', '', 'belum');
+('SEL001', '2022-07-13', 'PEL001', 'BER003', 'suratlamaran_1657791961.png', 'cv_1657793', '', '', '', '', '', '', '', '', '', 'psikotest.pdf', '', 'belum', '', '0000-00-00', '', 'belum');
 
 -- --------------------------------------------------------
 
