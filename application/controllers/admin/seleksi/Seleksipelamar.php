@@ -183,6 +183,465 @@ class Seleksipelamar extends CI_Controller
       redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
     }
   }
+  function uploadijazah()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'ijazah_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_ijazah')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_ijazah' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadskck()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'skck_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_skck')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_skck' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadsuratketdokter()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'uploadsuratketdokter_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_suratketdokter')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_suratketdokter' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadvaksin2()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'vaksin2_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_vaksin2')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_vaksin2' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadswab()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'swab_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_swab')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_swab' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadktp()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'ktp_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_ktp')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_ktp' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadkk()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'kk_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_kk')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_kk' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadsertifikat()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'sertifikat_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_sertifikat')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_sertifikat' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
+  function uploadsim()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'sim_' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('fc_sim')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'fc_sim' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/seleksi/seleksipelamar/lihat'));
+    }
+  }
   function uploadjawaban()
   {
     $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));

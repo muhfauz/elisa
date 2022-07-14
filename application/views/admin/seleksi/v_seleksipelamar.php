@@ -89,7 +89,7 @@
                                     <?php  } ?>
                                 </td>
                                 <td><?php if ($a->form_cv <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->form_cv ?>">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->form_cv ?>" target="_blank">
                                             <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                         <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadcv<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
@@ -99,56 +99,94 @@
                                     <?php  } ?>
                                 </td>
                                 <td><?php if ($a->fc_ijazah <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>"target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadijazah<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadijazah<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_skck <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                        </a>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratlamaran<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                                    <?php } else { ?>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratlamaran<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>"target="_blank">
+                                          <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                      </a>
+                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadskck<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                  <?php } else { ?>
+                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadskck<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                                    <?php  } ?>
+                                  <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_suratketdokter <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                        </a>
-                                    <?php } ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>"target="_blank">
+                                          <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                      </a>
+                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratketdokter<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                  <?php } else { ?>
+                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratketdokter<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                                  <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_vaksin2 <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_vaksin2 ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                        </a>
-                                    <?php } ?>
+                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_vaksin2 ?>"target="_blank">
+                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                </a>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadvaksin2<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                            <?php } else { ?>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadvaksin2<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                            <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_swab <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_swab ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                        </a>
-                                    <?php } ?>
+                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_swab ?>"target="_blank">
+                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                </a>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadswab<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                            <?php } else { ?>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadswab<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                            <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_ktp <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_ktp ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                        </a>
-                                    <?php } ?>
+                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ktp ?>"target="_blank">
+                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                </a>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadktp<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                            <?php } else { ?>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadktp<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                            <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_kk <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_kk ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                        </a>
-                                    <?php } ?>
+                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_kk ?>"target="_blank">
+                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                </a>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadkk<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                            <?php } else { ?>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadkk<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                            <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_sertifikat <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_sertifikat ?>">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
-                                        </a>
-                                    <?php } ?>
+                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_sertifikat ?>"target="_blank">
+                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                </a>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsertifikat<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                            <?php } else { ?>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsertifikat<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                            <?php } ?>
+                                </td>
+                                <td><?php if ($a->fc_sim <> "") { ?>
+                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_sim ?>"target="_blank">
+                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                </a>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsim<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                            <?php } else { ?>
+                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsim<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                            <?php } ?>
                                 </td>
                                 <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_admin  ?></span></td>
                                 <!-- <td class="float-right">
@@ -463,6 +501,310 @@
     </div>
 <?php endforeach; ?>
 
+<!-- upload ijazah -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadijazah<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadijazah') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Ijazah :</label>
+                            <input name="fc_ijazah" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload skck -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadskck<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadskck') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">SKCK :</label>
+                            <input name="fc_skck" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload uploadsuratketdokter -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadsuratketdokter<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadsuratketdokter') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Surat Keterangan Dokter :</label>
+                            <input name="fc_suratketdokter" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload upload vaksin -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadvaksin2<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadvaksin2') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Sertifikat Vaksin :</label>
+                            <input name="fc_vaksin2" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload upload swab -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadswab<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadswab') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Surat Ket. SWAB :</label>
+                            <input name="fc_swab" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload upload ktp -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadktp<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadktp') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">KTP :</label>
+                            <input name="fc_ktp" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload uploadkk -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadkk<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadkk') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Kartu Keluarga :</label>
+                            <input name="fc_kk" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+
+<!-- upload uploadsertifikat -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadsertifikat<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadsertifikat') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Sertifikat :</label>
+                            <input name="fc_sertifikat" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+<!-- upload upload sim -->
+<?php foreach ($seleksi as $a) : ?>
+    <div class="modal fade" id="uploadsim<?php echo $a->kd_seleksi ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/seleksi/seleksipelamar/uploadsim') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">SIM :</label>
+                            <input name="fc_sim" type="file" class="form-control" required>
+                            <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
 <!-- akhir detail -->
 
 <!-- Modal -->
