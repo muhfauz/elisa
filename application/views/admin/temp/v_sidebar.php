@@ -134,8 +134,8 @@
         </li>
         <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksi') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lowongan</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksi/arsip') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Recruitmen</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksipelamar') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lowongan</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksi/arsippelamar') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Recruitmen</a></li>
 
           </ul>
         </li>
