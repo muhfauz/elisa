@@ -78,9 +78,12 @@
                                 <td><?php echo $a->nama_pelamar ?></td>
 
                                 <td><?php
-                                    echo $a->tempatlahir_pelamar . ', ' . $this->Mglobal->tanggalindo($a->tgllahir_pelamar);
-
-                                    ?></td>
+                                    if ($a->tgllahir_pelamar == '0000-00-00') {
+                                        echo "-";
+                                    } else {
+                                        echo $a->tempatlahir_pelamar . ', ' . $this->Mglobal->tanggalindo($a->tgllahir_pelamar);
+                                    } ?>
+                                </td>
 
                                 <!-- <td><img src="<?php echo base_url('assets/toko/images/seleksi/') . $a->foto_seleksi ?>" alt=""> -->
                                 </td>
