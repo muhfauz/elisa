@@ -88,21 +88,24 @@
                                         <a href="<?php echo base_url() ?>berkas/<?php echo $a->jawaban_psikotes ?>" target="_blank">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
                                         </a>
+                                    <?php } else { ?>
+                                        <button class="btn btn-sm btn-warning"> <i class="fa fa-exclamation mr-2" aria-hidden="true"></i>belum kirim jawaban </button>
                                     <?php } ?>
                                 </td>
 
 
 
-                                <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_admin  ?></span></td>
+                                <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_hrd  ?></span>
+                                </td>
                                 <td class="float-right">
-                                    <?php if ($a->ket_admin == "belum") { ?>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
-                                        <a href="" class="btn btn-info btn-sm mb-1" data-toggle="modal" data-target="#terimadata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-edit mr-2"></i> Terima seleksi</a>
-                                        <a href="" class="btn btn-danger btn-sm mb-1" data-toggle="modal" data-target="#tolakdata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-trash mr-2"></i> Tolak seleksi</a>
-                                    <?php } elseif ($a->ket_admin == "tolak") { ?>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
-                                    <?php } elseif ($a->ket_admin == "terima") { ?>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
+                                    <?php if ($a->ket_hrd == "belum") { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Detail</a>
+                                        <a href="" class="btn btn-info btn-sm mb-1" data-toggle="modal" data-target="#terimadata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-check mr-2"></i> Terima seleksi</a>
+                                        <a href="" class="btn btn-danger btn-sm mb-1" data-toggle="modal" data-target="#tolakdata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-times-circle mr-2"></i> Tolak seleksi</a>
+                                    <?php } elseif ($a->ket_hrd == "tolak") { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Detail</a>
+                                    <?php } elseif ($a->ket_hrd == "terima") { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Detail</a>
                                     <? } else { ?>
 
                                     <?php } ?>
@@ -313,15 +316,15 @@
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
                 <div class="modal-header bg-success text-white">
-                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-user-circle-o mr-2"></i> Terima seleksi</h5>
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-check mr-2"></i> Terima seleksi</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="<?php echo base_url('admin/seleksi/seleksi/terimapelamar') ?>" method="post">
+                    <form action="<?php echo base_url('admin/seleksi/seleksihrd/terimapelamar') ?>" method="post">
                         <div class="form-group">
-                            Apakah Pelamar ini ikut ke Tahap Seleksi Selanjutnya? <br>
+                            Apakah Pelamar ini Lolos Psikotes? <br>
                             <label for="">Alasan :</label>
                             <input name="alasan_admin" type="text" class="form-control" required>
                             <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>

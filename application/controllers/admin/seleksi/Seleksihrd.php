@@ -60,7 +60,7 @@ class Seleksihrd extends CI_Controller
     } else {
       $kd_lowongan = $this->session->userdata('kd_lowongan');
     }
-    $data['x1'] = 'Data Pelamar ' . $this->db->query("select * from tbl_lowongan where kd_lowongan='$kd_lowongan'")->row()->nama_lowongan;;
+    $data['x1'] = 'Data Pelamar ' . $this->db->query("select * from tbl_lowongan where kd_lowongan='$kd_lowongan'")->row()->nama_lowongan . ' Lolos Seleksi Administrasi';
     $data['x2'] = 'Lowongan';
     $data['x3'] = 'Lowongan';
     $data['judul_bawah'] = 'Lowongan';
@@ -100,7 +100,7 @@ class Seleksihrd extends CI_Controller
               <span aria-hidden="true">&times;</span>
             </button>
           </div>');
-    redirect(base_url('admin/seleksi/seleksi/lihat'));
+    redirect(base_url('admin/seleksi/seleksihrd/lihat'));
   }
   function terimapelamar()
   {
@@ -108,10 +108,10 @@ class Seleksihrd extends CI_Controller
     $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
     $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
     $data = array(
-      'alasan_admin' => $this->input->post('alasan_admin'),
-      'ket_admin' => 'terima',
-      'kd_admin' => $this->session->userdata('kd_admin'),
-      'tglseleksi_admin' => date('Y-m-d'),
+      'alasan_hrd' => $this->input->post('alasan_hrd'),
+      'ket_hrd' => 'terima',
+      'kd_hrd' => $this->session->userdata('kd_hrd'),
+      'tglseleksi_hrd' => date('Y-m-d'),
     );
     $this->Mglobal->editdata('tbl_seleksi', $where, $data);
     $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -120,6 +120,6 @@ class Seleksihrd extends CI_Controller
               <span aria-hidden="true">&times;</span>
             </button>
           </div>');
-    redirect(base_url('admin/seleksi/seleksi/lihat'));
+    redirect(base_url('admin/seleksi/seleksihrd/lihat'));
   }
 }
