@@ -127,8 +127,8 @@
       <?php } elseif ($this->session->userdata('posisi') == 'hrd') { ?>
         <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksihrd') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lamaran saya</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksihrd/arsiphrd') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Lamaran saya</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksihrd') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lowongan Buka</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksihrd/arsiphrd') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Lowongan</a></li>
 
           </ul>
         </li>

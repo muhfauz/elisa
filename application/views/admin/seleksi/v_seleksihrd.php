@@ -53,17 +53,9 @@
                             <th class="text-center text-white align-middle" width="10px">No</th>
                             <th class="text-center text-white align-middle">Nama Pelamar</th>
                             <th class="text-center text-white align-middle">Tempat, Tanggal Lahir</th>
-                            <th class="text-center text-white align-middle">Surat Lamaran</th>
-                            <th class="text-center text-white align-middle">CV</th>
-                            <th class="text-center text-white align-middle">Ijazah</th>
-                            <th class="text-center text-white align-middle">SKCK</th>
-                            <th class="text-center text-white align-middle">Surat Dokter</th>
-                            <th class="text-center text-white align-middle">Vaksin 2</th>
-                            <th class="text-center text-white align-middle">Swab</th>
-                            <th class="text-center text-white align-middle">KTP</th>
-                            <th class="text-center text-white align-middle">KK</th>
-                            <th class="text-center text-white align-middle">Sertifikat</th>
-                            <th class="text-center text-white align-middle">Keterangan</th>
+                            <th class="text-center text-white align-middle">Soal Psikotes</th>
+                            <th class="text-center text-white align-middle">Jawaban Psikotes</th>
+                            <th class="text-center text-white align-middle">Hasil Psikotes</th>
                             <!-- <th class="text-center text-white">Foto</th> -->
                             <th class="text-center text-white" width="300px"></th>
 
@@ -85,68 +77,22 @@
                                     } ?>
                                 </td>
 
-                                <!-- <td><img src="<?php echo base_url('assets/toko/images/seleksi/') . $a->foto_seleksi ?>" alt=""> -->
+
+                                <td>
+                                    <a href="<?php echo base_url() ?>berkas/<?php echo $a->data_psikotes ?>" target="_blank">
+                                        <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
+                                    </a>
+
                                 </td>
-                                <td><?php if ($a->surat_lamaran <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->surat_lamaran ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                <td><?php if ($a->jawaban_psikotes <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->jawaban_psikotes ?>" target="_blank">
+                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-download mr-2" aria-hidden="true"></i>Download </button>
                                         </a>
                                     <?php } ?>
                                 </td>
-                                <td><?php if ($a->form_cv <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->form_cv ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_ijazah <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_skck <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_suratketdokter <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_vaksin2 <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_vaksin2 ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_swab <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_swab ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_ktp <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_ktp ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_kk <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_kk ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
-                                <td><?php if ($a->fc_sertifikat <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_sertifikat ?>" target="_blank">
-                                            <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                        </a>
-                                    <?php } ?>
-                                </td>
+
+
+
                                 <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_admin  ?></span></td>
                                 <td class="float-right">
                                     <?php if ($a->ket_admin == "belum") { ?>

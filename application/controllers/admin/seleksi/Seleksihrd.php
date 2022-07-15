@@ -16,7 +16,7 @@ class Seleksihrd extends CI_Controller
   function index()
   {
 
-    $data['x1'] = 'Lowongan Aktif';
+    $data['x1'] = 'Lowongan Buka';
     $data['x2'] = 'Lowongan';
     $data['x3'] = 'Lowongan';
     $tgl_sekarang = date('Y-m-d');
@@ -71,7 +71,7 @@ class Seleksihrd extends CI_Controller
     $data['tgl_tutup']  = $this->Mglobal->tanggalindo($this->db->query("select * from tbl_lowongan where kd_lowongan='$kd_lowongan'")->row()->tgl_tutup);
     $data['jumlah_pelamar']  = $this->db->query("select * from tbl_seleksi where kd_lowongan='$kd_lowongan'")->num_rows();
     $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
-    $data['seleksi'] = $this->db->query("select * from tbl_seleksi S, tbl_lowongan L, tbl_pelamar P where S.kd_lowongan=L.kd_lowongan and S.kd_pelamar=P.kd_pelamar and S.kd_lowongan='$kd_lowongan' order by S.kd_seleksi desc")->result();
+    $data['seleksi'] = $this->db->query("select * from tbl_seleksi S, tbl_lowongan L, tbl_pelamar P where S.kd_lowongan=L.kd_lowongan and S.kd_pelamar=P.kd_pelamar and S.kd_lowongan='$kd_lowongan' and S.ket_admin='terima' order by S.kd_seleksi desc")->result();
     // $data['kategori'] = $this->Mglobal->tampilkandata('tbl_kategori');
     $this->load->view('admin/temp/v_header', $data);
     $this->load->view('admin/temp/v_atas');
