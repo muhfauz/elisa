@@ -124,6 +124,22 @@
 
           </ul>
         </li>
+      <?php } elseif ($this->session->userdata('posisi') == 'hrd') { ?>
+        <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksihrd') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lamaran saya</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksihrd/arsiphrd') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Lamaran saya</a></li>
+
+          </ul>
+        </li>
+
+        <li class="treeview"> <a href="#"><i class="fa fa-cogs mr-2" aria-hidden="true"></i><span>Pengaturan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+          <ul class="treeview-menu">
+            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/datadirihrd') ?>"><i class="fa fa-user mr-2" aria-hidden="true"></i>Data Diri</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/gantipasshrd') ?>"><i class="fa fa-key mr-2" aria-hidden="true"></i>Ganti Password</a></li>
+
+          </ul>
+        </li>
 
       <?php } else { ?>
 
@@ -144,7 +160,9 @@
         </li>
       <?php } ?>
 
-      <li> <a href="<?php echo base_url('login/logout') ?>"> <i class="fa fa-power-off "></i> <span>Keluar</span> <span class="pull-right-container"> </span> </a>
+      <li>
+        <a href="<?php echo base_url('login/logout') ?>"> <i class="fa fa-power-off "></i> <span>Keluar</span> <span class="pull-right-container"> </span> </a>
+      </li>
     </ul>
   </div>
   <!-- /.sidebar -->
