@@ -95,7 +95,10 @@
                                 <td class="float-right">
 
                                     <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_lowongan ?>"> <i class="fa fa-info mr-2"></i> Detail Lowongan</a>
-                                    <a href="" class="btn btn-info btn-sm mb-1" data-toggle="modal" data-target="#lihatdata<?php echo $a->kd_lowongan ?>"> <i class="fa fa-upload mr-2"></i> Upload Dokumen</a>
+                                    <?php if ($a->ket_admin == 'belum') { ?>
+                                        <a href="" class="btn btn-info btn-sm mb-1" data-toggle="modal" data-target="#lihatdata<?php echo $a->kd_lowongan ?>"> <i class="fa fa-upload mr-2"></i> Upload Dokumen</a>
+                                    <?php } ?>
+
 
                                 </td>
                             </tr>

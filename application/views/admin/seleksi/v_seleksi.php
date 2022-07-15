@@ -346,6 +346,7 @@
                             <label for="">Alasan :</label>
                             <input name="alasan_admin" type="text" class="form-control" required>
                             <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required>
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
                         </div>
 
 

@@ -99,7 +99,7 @@
                                     <?php  } ?>
                                 </td>
                                 <td><?php if ($a->fc_ijazah <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>"target="_blank">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ijazah ?>" target="_blank">
                                             <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                         <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadijazah<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
@@ -109,84 +109,84 @@
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_skck <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>"target="_blank">
-                                          <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                      </a>
-                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadskck<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                                  <?php } else { ?>
-                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadskck<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_skck ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadskck<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadskck<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                                  <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_suratketdokter <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>"target="_blank">
-                                          <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                      </a>
-                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratketdokter<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                                  <?php } else { ?>
-                                      <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratketdokter<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_suratketdokter ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratketdokter<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsuratketdokter<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                                  <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_vaksin2 <> "") { ?>
-                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_vaksin2 ?>"target="_blank">
-                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                </a>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadvaksin2<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                            <?php } else { ?>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadvaksin2<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_vaksin2 ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadvaksin2<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadvaksin2<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                            <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_swab <> "") { ?>
-                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_swab ?>"target="_blank">
-                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                </a>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadswab<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                            <?php } else { ?>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadswab<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_swab ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadswab<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadswab<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                            <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_ktp <> "") { ?>
-                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ktp ?>"target="_blank">
-                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                </a>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadktp<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                            <?php } else { ?>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadktp<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ktp ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadktp<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadktp<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                            <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_kk <> "") { ?>
-                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_kk ?>"target="_blank">
-                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                </a>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadkk<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                            <?php } else { ?>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadkk<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_kk ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadkk<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadkk<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                            <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_sertifikat <> "") { ?>
-                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_sertifikat ?>"target="_blank">
-                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                </a>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsertifikat<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                            <?php } else { ?>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsertifikat<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_sertifikat ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsertifikat<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsertifikat<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                            <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_sim <> "") { ?>
-                                  <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_sim ?>"target="_blank">
-                                    <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
-                                </a>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsim<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
-                            <?php } else { ?>
-                                <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsim<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_sim ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsim<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploadsim<?php echo $a->kd_seleksi ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
 
-                            <?php } ?>
+                                    <?php } ?>
                                 </td>
                                 <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_admin  ?></span></td>
                                 <!-- <td class="float-right">

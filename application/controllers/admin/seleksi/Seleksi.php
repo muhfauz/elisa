@@ -86,7 +86,7 @@ class seleksi extends CI_Controller
     $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
     $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
 
-    $where = array('kd_pelamar' => $this->input->post('kd_pelamar'));
+    $where = array('kd_seleksi' => $this->input->post('kd_seleksi'));
     $data = array(
       'alasan_admin' => $this->input->post('alasan_admin'),
       'ket_admin' => 'tolak',

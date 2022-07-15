@@ -31,21 +31,22 @@ class Seleksipelamar extends CI_Controller
     $this->load->view('admin/seleksi/v_seleksilowonganpelamar');
     $this->load->view('admin/temp/v_footer');
   }
-  function arsip()
+  function arsippelamar()
   {
+    $kd_pelamar = $this->session->userdata('kd_pelamar');
 
-    $data['x1'] = 'Lowongan';
+    $data['x1'] = 'Lowongan Aktif';
     $data['x2'] = 'Lowongan';
     $data['x3'] = 'Lowongan';
     $tgl_sekarang = date('Y-m-d');
     // $data['x4']='Data lowongan Sahabat Optik';
     $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
-    $data['lowongan'] = $this->db->query("select * from tbl_lowongan where tgl_tutup <='$tgl_sekarang'")->result();
+    $data['lowongan'] = $this->db->query("select * from tbl_seleksi S, tbl_lowongan L, tbl_pelamar P where S.kd_lowongan=L.kd_lowongan and S.kd_pelamar=P.kd_pelamar and  L.tgl_tutup <= '$tgl_sekarang' and S.kd_pelamar='$kd_pelamar' and S.ket_admin<>'belum'")->result();
     // $data['kategori'] = $this->Mglobal->tampilkandata('tbl_kategori');
     $this->load->view('admin/temp/v_header', $data);
     $this->load->view('admin/temp/v_atas');
     $this->load->view('admin/temp/v_sidebar');
-    $this->load->view('admin/seleksi/v_seleksilowongan');
+    $this->load->view('admin/seleksi/v_seleksilowonganpelamar');
     $this->load->view('admin/temp/v_footer');
   }
   function lihat()
