@@ -175,18 +175,24 @@
                                 <?php echo $l->detail_lowongan ?>
 
 
-                                <h3 class="block-heading-title text-capitalize">Lamar</h3>
+
                                 <button class="btn btn-danger btn-sm text-highlighter-white"><i class="fa fa-calendar-o mr-3" aria-hidden="true"></i> Paling lambat <?php echo $this->Mglobal->tanggalindo($l->tgl_tutup) ?></button>
                                 <?php if ($this->session->userdata('status') == 'login') {
                                     if ($this->session->userdata('posisi') == 'pelamar') {
                                         $kd_pelamar = $this->session->userdata('kd_pelamar');
                                         $kd_lowongan = $l->kd_lowongan;
+                                        $tglsekarang = date('Y-m-d');
                                         $sudah = $this->db->query("select * from tbl_seleksi where kd_pelamar='$kd_pelamar' and kd_lowongan='$kd_lowongan'")->num_rows();
+                                        $sudahsatu = $this->db->query("select * from tbl_seleksi S, tbl_lowongan L where S.kd_lowongan=L.kd_lowongan and  S.kd_pelamar='$kd_pelamar' and L.tgl_tutup>='$tglsekarang'")->num_rows();
                                         if ($sudah > 0) { ?>
-                                            <button class="btn btn-sm btn-danger">Anda sudah daftar lowogan ini</button>
+                                            <button class="btn btn-sm btn-danger">Anda sudah daftar lowongan ini</button>
                                         <?php   } else { ?>
+                                            <?php if ($sudahsatu > 0) { ?>
+                                                <button class="btn btn-sm btn-danger">Anda Daftar di Lowongan Lain</button>
+                                            <?php } else { ?>
 
-                                            <a href="" class="btn btn-primary btn-lg mb-1" data-toggle="modal" data-target="#hapusdata<?php echo $l->kd_lowongan ?>"> <i class="fa check mr-2"></i> Apply </a>
+                                                <a href="" class="btn btn-primary btn-lg mb-1" data-toggle="modal" data-target="#hapusdata<?php echo $l->kd_lowongan ?>"> <i class="fa check mr-2"></i> Apply </a>
+                                            <?php } ?>
                                         <?php    }   ?>
                                     <?php   }   ?>
                                 <?php } else { ?>

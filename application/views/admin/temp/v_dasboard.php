@@ -2,14 +2,20 @@
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <div class="content-header sty-one">
-    <?php if ($this->session->userdata('posisi') == 'admin') { ?>
-      <h4 class="fa fa-home" aria-hidden="true"> Selamat Datang, <?php echo $this->session->userdata('nama'); ?> [ADMIN]</h4>
-    <?php } else {
-
+    <?php
+    $kd_admin = $this->session->userdata('kd_admin');
+    $kd_pelamar = $this->session->userdata('kd_pelamar');
+    $kd_hrd = $this->session->userdata('kd_hrd');
     ?>
+    <?php if ($this->session->userdata('posisi') == 'admin') { ?>
 
-      <h4><i class="fa fa-home mr-2" aria-hidden="true"></i>Selamat Datang, <?php echo $this->session->userdata('nama'); ?> [ <?php echo $this->session->userdata('posisi') ?>]</h4>
+      <h4 class="fa fa-home" aria-hidden="true"> Selamat Datang, <?php echo $this->db->query("select * from tbl_admin where kd_admin='$kd_admin'")->row()->nama_admin ?> [ADMIN]</h4>
+    <?php } elseif ($this->session->userdata('posisi') == 'pelamar') { ?>
+      <h4 class="fa fa-home" aria-hidden="true"> Selamat Datang, <?php echo $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->nama_pelamar ?> [PELAMAR]</h4>
+    <?php } else { ?>
+      <h4 class="fa fa-home" aria-hidden="true"> Selamat Datang, <?php echo $this->db->query("select * from tbl_hrd where kd_hrd='$kd_hrd'")->row()->nama_hrd ?> [HRD]</h4>
     <?php } ?>
+
 
     <ol class="breadcrumb">
       <li><a href="#">Home</a></li>
@@ -75,8 +81,8 @@
         $kd_pelamar = $this->session->userdata('kd_pelamar');
         if ($this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->jk_pelamar == '' or $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->pendidikan_pelamar == '' or $this->db->query("select * from tbl_pelamar where kd_pelamar='$kd_pelamar'")->row()->agama_pelamar == '') { ?>
 
-          <div class="alert alert-danger alert-dismissible fade show col-lg- col-xs-6 ml-2" role="alert">
-            <strong>Peringatan!</strong> Anda harus melengkapi data diri
+          <div class="alert alert-danger alert-dismissible fade show col-lg-11 col-xs-12 ml-2" role="alert">
+            <strong class="mt-2">Peringatan!</strong> Anda harus melengkapi data diri
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -93,9 +99,9 @@
         <div class="col-lg-3 col-xs-6">
 
 
-          <a href="<?php echo base_url('admin/pendaftaran/jadwal') ?>">
-            <div class="info-box"> <span class="info-box-icon bg-blue"><i class="fa fa-calendar-check-o text-white" aria-hidden="true"></i></span>
-              <div class="info-box-content"> <span class="info-box-number "> Jadwal</span> <span class="info-box-text">Pendaftaran</span></div>
+          <a href="<?php echo base_url('admin/pengaturan/datadiri') ?>">
+            <div class="info-box"> <span class="info-box-icon bg-blue"><i class="fa fa-user text-white" aria-hidden="true"></i></span>
+              <div class="info-box-content"> <span class="info-box-number "> Data Diri</span> <span class="info-box-text">Data Diri Saya</span></div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
@@ -103,9 +109,27 @@
         </div>
 
         <div class="col-lg-3 col-xs-6">
-          <a href="<?php echo base_url('admin/pendaftaran/datasantri') ?>">
-            <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-graduation-cap text-white" aria-hidden="true"></i></span>
-              <div class="info-box-content"> <span class="info-box-number"> Pendaftaran</span> <span class="info-box-text">Daftar</span></div>
+          <a href="<?php echo base_url('admin/seleksi/seleksipelamar/') ?>">
+            <div class="info-box"> <span class="info-box-icon bg-info"><i class="fa fa-wpexplorer text-white" aria-hidden="true"></i></span>
+              <div class="info-box-content"> <span class="info-box-number"> Lamaranku</span> <span class="info-box-text">Lihat</span></div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </a>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <a href="<?php echo base_url('admin/seleksi/seleksipelamar/arsippelamar') ?>">
+            <div class="info-box"> <span class="info-box-icon bg-aqua"><i class="fa fa-file-archive-o text-white" aria-hidden="true"></i></span>
+              <div class="info-box-content"> <span class="info-box-number"> Arsipku</span> <span class="info-box-text">Lihat</span></div>
+              <!-- /.info-box-content -->
+            </div>
+            <!-- /.info-box -->
+          </a>
+        </div>
+        <div class="col-lg-3 col-xs-6">
+          <a href="<?php echo base_url('admin/pengaturan/gantipasspelamar') ?>">
+            <div class="info-box"> <span class="info-box-icon bg-danger"><i class="fa fa-key text-white" aria-hidden="true"></i></span>
+              <div class="info-box-content"> <span class="info-box-number"> Ganti</span> <span class="info-box-text">Password</span></div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->

@@ -126,16 +126,11 @@
         </li>
 
       <?php } else { ?>
-        <li class="treeview"> <a href="#"><i class="fa fa-file-pdf-o mr-2" aria-hidden="true"></i><span>Berkas</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
-          <ul class="treeview-menu">
-            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/gantipassantri') ?>"><i class="fa fa-upload mr-2" aria-hidden="true"></i>Upload Berkas</a></li>
 
-          </ul>
-        </li>
         <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
-            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksipelamar') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lowongan</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksipelamar/arsippelamar') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Recruitmen</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksipelamar') ?>"> <i class="fa fa-wpexplorer mr-1"></i>Lamaran saya</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/seleksi/seleksipelamar/arsippelamar') ?>"> <i class="fa fa-file-archive-o mr-1"></i>Arsip Lamaran saya</a></li>
 
           </ul>
         </li>

@@ -19,17 +19,17 @@
             <p><?php echo $nama_perush; ?></p>
             <div class="table-responsive">
                 <?php echo $this->session->userdata('pesan'); ?>
-                <a href="" class="btn btn-primary bg-aqua-gradient mb-2" data-toggle="modal" data-target="#tambahdata"> <i class="fa fa-plus-square mr-2"></i> Tambah lowongan</a>
+                <a href="" class="btn btn-primary bg-aqua mb-2" data-toggle="modal" data-target="#tambahdata"> <i class="fa fa-plus-square mr-2"></i> Tambah lowongan</a>
                 <table id="example1" class="table table-bordered table-striped table-hover">
-                    <thead class=" bg-aqua-gradient ">
+                    <thead class="bg-aqua">
                         <tr>
                             <th class="text-center text-white" width="10px">No</th>
                             <th class="text-center text-white">Nama Lowongan</th>
                             <th class="text-center text-white">Detail Lowongan</th>
                             <th class="text-center text-white">Gambar</th>
-                            <!-- <th class="text-center text-white"></th> -->
+                            <th class="text-center text-white">Soal Psikotes</th>
                             <th class="text-center text-white" width="300px"></th>
-                            <th class="text-center text-white" width="0px"></th>
+
 
                         </tr>
                     </thead>
@@ -42,6 +42,16 @@
                                 <td><?php echo $a->nama_lowongan ?></td>
                                 <td><?php echo substr($a->detail_lowongan, 0, 200) . '...';  ?></td>
                                 <td> <img class="img-thumbnail" src=" <?php echo base_url('gambar/') . $a->gambar_lowongan ?>" alt="" width="100" height="100"> </td>
+                                <td><?php if ($a->data_psikotes <> "") { ?>
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->data_psikotes ?>" target="_blank">
+                                            <button class="btn btn-sm btn-info mb-1"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
+                                        </a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploaddata<?php echo $a->kd_lowongan ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+                                    <?php } else { ?>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#uploaddata<?php echo $a->kd_lowongan ?>"> <i class="fa fa-upload mr-2"></i> Upload</a>
+
+                                    <?php } ?>
+                                </td>
                                 <td class="float-right">
 
                                     <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_lowongan ?>"> <i class="fa fa-plus-square mr-2"></i> Detail</a>
@@ -248,6 +258,40 @@
                     CKEDITOR.replace('isi_lowongan2');
                 </script>
 
+            </div>
+        </div>
+    </div>
+<?php endforeach; ?>
+<!-- upload soal psikotes -->
+<!-- upload upload sim -->
+<?php foreach ($lowongan as $a) : ?>
+    <div class="modal fade" id="uploaddata<?php echo $a->kd_lowongan ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title" id="exampleModalLabel"> <i class="fa fa fa-file-pdf-o mr-2"></i> Upload Dokumen</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="<?php echo base_url('admin/lowongan/lowongan/uploaddata') ?>" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            Pilih Dokumen <br>
+                            <label for="">Soal Psikotes :</label>
+                            <input name="data_psikotes" type="file" class="form-control" required>
+                            <!-- <input name="kd_seleksi" type="hidden" class="form-control" value="<?php echo $a->kd_seleksi ?>" required> -->
+                            <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $a->kd_lowongan ?>" required>
+                        </div>
+
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Tidak</button>
+                    <button type="submit" class="btn btn-danger"><i class="fa fa-upload mr-1" aria-hidden="true"></i>Upload</button>
+                </div>
+                </form>
             </div>
         </div>
     </div>

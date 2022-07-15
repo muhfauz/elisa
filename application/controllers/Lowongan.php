@@ -36,7 +36,7 @@ class Lowongan extends CI_Controller
         // $data['bidang'] = $this->Mglobal->tampilkandata('tbl_bidang');
         // $data['lowongan'] = $this->Mglobal->tampilkandata('tbl_lowongan');
         $data['judul'] = 'Daftar Akun';
-        $data['kalimat'] = 'Isika Identitas Pendaftar';
+        $data['kalimat'] = 'Isikan Identitas Pendaftar';
         $this->load->view('depan/temp/v_head', $data);
         $this->load->view('depan/temp/v_header');
         // $this->load->view('depan/temp/v_navbar');
@@ -64,7 +64,7 @@ class Lowongan extends CI_Controller
             'kd_lowongan' => $this->input->post('kd_lowongan'),
             'tgl_seleksi' => date('Y-m-d'),
             'kd_pelamar' => $this->session->userdata('kd_pelamar'),
-            'data_psikotes' => 'psikotest.pdf',
+            // 'data_psikotes' => 'psikotest.pdf',
         );
         $this->Mglobal->tambahdata($data, 'tbl_seleksi');
         $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">

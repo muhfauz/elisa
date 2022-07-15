@@ -171,4 +171,55 @@ class Lowongan extends CI_Controller
       redirect(base_url('admin/lowongan/lowongan/'));
     }
   }
+  function uploaddata()
+  {
+    $kd_lowongan = $this->session->set_flashdata('kd_lowongan', $this->input->post('kd_lowongan'));
+    // $kd_seleksi = $this->session->set_flashdata('kd_seleksi', $this->input->post('kd_seleksi'));
+
+    $where = array('kd_lowongan' => $this->input->post('kd_lowongan'));
+    $config['upload_path'] = './berkas/';
+    $config['allowed_types'] = 'jpg|pdf|jpeg|png|tif|bmp|jfif';
+    $config['max_size'] = '2048000000';
+    $config['file_name'] = 'data_psikotes' . time();
+    $this->load->library('upload', $config);
+    if ($this->upload->do_upload('data_psikotes')) {
+      $image = $this->upload->data();
+      $data = array(
+
+        'data_psikotes' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      // $this->Mglobal->editdata('tbl_seleksi', $where, $data);
+      $this->Mglobal->editdata('tbl_lowongan', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Upload Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/lowongan/lowongan/'));
+      //  }
+      //  else {
+
+      //    $this->load->view('adm/header');
+      //    $this->load->view('adm/sidebar');
+      //    $this->load->view('adm/master/berita/vtambahberita');
+      //    $this->load->view('adm/footer');
+      //  }
+    } else {
+      $data = array(
+        // 'surat_lamaran' => $image['file_name'],
+        // 'gambar_berita' => $image['file_name'],
+        //  'password_berita'=>md5($this->input->post('password_berita'))
+      );
+      $this->Mglobal->editdata('tbl_lowongan', $where, $data);
+      $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+            <strong>Edit Data Sukses!</strong> Data berhasil disimpan ke database.
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>');
+      redirect(base_url('admin/lowongan/lowongan/'));
+    }
+  }
 }
