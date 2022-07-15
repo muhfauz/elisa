@@ -86,7 +86,7 @@
                 <form action="<?php echo base_url('admin/lowongan/lowongan/aksitambahlowongan') ?>" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label for="">Nama Lowongan </label>
-                        <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $this->Mglobal->kode_otomatis('kd_lowongan', 'tbl_lowongan', 'BER') ?>" required>
+                        <input name="kd_lowongan" type="hidden" class="form-control" value="<?php echo $this->Mglobal->kode_otomatis('kd_lowongan', 'tbl_lowongan', 'LOW') ?>" required>
                         <input name="nama_lowongan" type="text" class="form-control" required>
                     </div>
 
