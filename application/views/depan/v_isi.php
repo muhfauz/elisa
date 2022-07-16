@@ -5,79 +5,38 @@
 
 
 
-        <div class="slider_item_container" data-bg_img="<?php echo base_url('assets/depan/') ?>images/home_1_slider_3.jpg" data-bg_color="#111111" data-bg_opacity="0.35">
-            <div class="item">
-                <div class="slider-content">
-                    <div class="container text-left">
-                        <div class="row">
-                            <div class="slider-bg" data-animation-in="fadeInDown" data-animation-out="zoomInDown">
-                                <div class="col-sm-12 wow fadeInLeft" data-wow-duration="1s">
-                                    <h2 class="margin-bottom-12">
-                                        LEARN SWIM <br />
-                                        THE RIGHT WAY
-                                    </h2>
-                                    <h3 class="margin-bottom-24">
-                                        Our Skilled Trainers Makes Swimming Lesson
-                                        <br />
-                                        Fun And Effective For You.
-                                    </h3>
-                                    <a href="#" class="btn btn-theme btn-theme-white">Get Started Now</a>
-                                    <a href="#" class="btn btn-theme btn-invert">Learn More</a>
 
-                                </div>
-                            </div> <!-- end .col-sm-12  -->
-                        </div> <!-- end .row  -->
-                    </div><!-- end .container -->
-                </div> <!--  end .slider-content -->
-            </div> <!-- end .item  -->
-        </div> <!-- end .slider_item_container  -->
+        <?php foreach ($slider as $s) : ?>
 
-        <div class="slider_item_container" data-bg_img="<?php echo base_url('assets/depan/') ?>images/home_1_slider_2.jpg" data-bg_color="#111111" data-bg_opacity="0.25">
-            <div class="item">
-                <div class="slider-content">
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="slider-bg" data-animation-in="fadeInLeft" data-animation-out="zoomInDown">
-                                <div class="col-sm-12 wow fadeInLeft" data-wow-duration="1s">
-                                    <h2 class="margin-bottom-12">
-                                        SWIM DAILY <br />
-                                        TO KEEP YOURSELF FIT
-                                    </h2>
-                                    <h3 class="margin-bottom-24">Our Skilled Trainers Makes Swimming Lesson Fun And Effective</h3>
 
-                                    <a href="#" class="btn btn-theme btn-theme-white btn-invert">Get Started Now</a>
-                                    <a href="#" class="btn btn-theme btn-square">Learn More</a>
 
-                                </div>
-                            </div> <!-- end .col-sm-12  -->
-                        </div> <!-- end .row  -->
-                    </div><!-- end .container -->
-                </div> <!--  end .slider-content -->
-            </div> <!-- end .item  -->
-        </div> <!-- end .slider_item_container  -->
+            <div class="slider_item_container" data-bg_img="<?php echo base_url('assets/depan/images/') . $s->gambar_slider ?>" data-bg_color="#111111" data-bg_opacity="0.25">
+                <div class="item">
+                    <div class="slider-content">
+                        <div class="container text-center">
+                            <div class="row">
+                                <div class="slider-bg" data-animation-in="fadeInLeft" data-animation-out="zoomInDown">
+                                    <div class="col-sm-12 wow fadeInLeft" data-wow-duration="1s">
+                                        <h2 class="margin-bottom-12">
+                                            <?php echo $s->atas_slider ?> <br />
+                                            <?php echo $s->tengah_slider ?>
 
-        <div class="slider_item_container" data-bg_img="<?php echo base_url('assets/depan/') ?>images/home_1_slider_1.jpg" data-bg_color="#111111" data-bg_opacity="0.25">
-            <div class="item">
-                <div class="slider-content">
-                    <div class="container text-center">
-                        <div class="row">
-                            <div class="slider-bg" data-animation-in="fadeInUp" data-animation-out="zoomInDown">
-                                <div class="col-sm-12 wow fadeInDown" data-wow-duration="1s">
-                                    <h3>LEARN SWIMMING EASILY</h3>
-                                    <h2 class="margin-bottom-12">
+                                        </h2>
+                                        <h3 class="margin-bottom-24"> <?php echo $s->bawah_slider ?></h3>
 
-                                        WELCOME TO THE
-                                        <br> SWIM EASY ACADEMY !
-                                    </h2>
-                                    <a href="#" class="btn btn-theme">Get Started Now</a>
-                                    <a href="#" class="btn btn-theme btn-theme-white">Learn More</a>
-                                </div>
-                            </div> <!-- end .col-sm-12  -->
-                        </div> <!-- end .row  -->
-                    </div><!-- end .container -->
-                </div> <!--  end .slider-content -->
-            </div> <!-- end .item  -->
-        </div> <!-- end .slider_item_container  -->
+                                        <!-- <a href="#" class="btn btn-theme btn-theme-white btn-invert">Get Started Now</a>
+                                        <a href="#" class="btn btn-theme btn-square">Learn More</a> -->
+
+                                    </div>
+                                </div> <!-- end .col-sm-12  -->
+                            </div> <!-- end .row  -->
+                        </div><!-- end .container -->
+                    </div> <!--  end .slider-content -->
+                </div> <!-- end .item  -->
+            </div> <!-- end .slider_item_container  -->
+        <?php endforeach; ?>
+
+
 
     </div> <!-- end .slider_1  -->
 </div> <!-- end .slider-wrap.  -->

@@ -31,9 +31,9 @@ class Depan extends CI_Controller
 	public function index()
 	{
 		// $data['lowongan'] = $this->db->query("select * from tbl_lowongan L, tbl_bidang B, tbl_perusahaan P where L.kd_bidang=B.kd_bidang and L.kd_perush=P.kd_perush")->result();
-		// $data['bidang'] = $this->Mglobal->tampilkandata('tbl_bidang');
+		$data['slider'] = $this->Mglobal->tampilkandata('tbl_slider');
 		// $data['lowongan'] = $this->Mglobal->tampilkandata('tbl_lowongan');
-		$this->load->view('depan/temp/v_head');
+		$this->load->view('depan/temp/v_head', $data);
 		$this->load->view('depan/temp/v_header');
 		// $this->load->view('depan/temp/v_navbar');
 		$this->load->view('depan/v_isi');
@@ -42,9 +42,10 @@ class Depan extends CI_Controller
 	public function daftar()
 	{
 		// $data['lowongan'] = $this->db->query("select * from tbl_lowongan L, tbl_bidang B, tbl_perusahaan P where L.kd_bidang=B.kd_bidang and L.kd_perush=P.kd_perush")->result();
-		// $data['bidang'] = $this->Mglobal->tampilkandata('tbl_bidang');
+		$data['faq'] = $this->Mglobal->tampilkandata('tbl_faq');
 		// $data['lowongan'] = $this->Mglobal->tampilkandata('tbl_lowongan');
-		$data['judul'] = 'Daftar Akun';
+		$data['judul'] = 'Daftar Akun Pelamar';
+		$data['tatacara'] = 'Tata carfa Daftar';
 		$data['kalimat'] = 'Isika Identitas Pendaftar';
 		$this->load->view('depan/temp/v_head', $data);
 		$this->load->view('depan/temp/v_header');
@@ -93,13 +94,13 @@ class Depan extends CI_Controller
 				'password_pelamar' => md5($this->input->post('password_pelamar'))
 			);
 			$this->Mglobal->tambahdata($data, 'tbl_pelamar');
-			// 	$this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
-			//     <strong>Tambah Data Sukses!</strong> Data berhasil disimpan ke database.
-			//     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			//       <span aria-hidden="true">&times;</span>
-			//     </button>
-			//   </div>');
-			$this->session->set_flashdata('pesan', "isi pesan");
+			$this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+			    <strong>Tambah Data Sukses!</strong> Data berhasil disimpan ke database.
+			    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			      <span aria-hidden="true">&times;</span>
+			    </button>
+			  </div>');
+			// $this->session->set_flashdata('pesan', "isi pesan");
 
 			redirect(base_url('depan/daftar'));
 		}
