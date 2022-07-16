@@ -39,9 +39,9 @@
         </div>
         <!-- /.col -->
         <div class="col-lg-3 col-xs-6">
-          <a href="<?php echo base_url('admin/pendaftaran/pendaftaran') ?>">
-            <div class="info-box"> <span class="info-box-icon bg-green"><i class="fa fa-graduation-cap"></i></span>
-              <div class="info-box-content"> <span class="info-box-number">Santri Daftar</span> <span class="info-box-text"><?php echo $this->db->query("select * from tbl_santri where status_daftar='lengkap'")->num_rows() ?> santri</span></div>
+          <a href="<?php echo base_url('admin/master/hrd') ?>">
+            <div class="info-box"> <span class="info-box-icon bg-green"><i class="fa fa-user-o"></i></span>
+              <div class="info-box-content"> <span class="info-box-number">HRD</span> <span class="info-box-text"><?php echo $this->db->query("select * from tbl_admin")->num_rows() ?> orang</span></div>
               <!-- /.info-box-content -->
             </div>
           </a>
@@ -49,9 +49,9 @@
         </div>
         <!-- /.col -->
         <div class="col-lg-3 col-xs-6">
-          <a href="<?php echo base_url('admin/pendaftaran/pendaftaran/diterima') ?>">
-            <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="fa fa-check-circle"></i></span>
-              <div class="info-box-content"> <span class="info-box-number">Diterima</span> <span class="info-box-text"><?php echo $this->db->query("select * from tbl_santri where status_daftar='diterima'")->num_rows() ?> santri </span></div>
+          <a href="<?php echo base_url('admin/lowongan/lowongan') ?>">
+            <div class="info-box"> <span class="info-box-icon bg-yellow"><i class="fa fa-life-ring"></i></span>
+              <div class="info-box-content"> <span class="info-box-number">Lowongan</span> <span class="info-box-text"><?php echo $this->db->query("select * from tbl_lowongan")->num_rows() ?> lowongan </span></div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->
@@ -59,9 +59,9 @@
         </div>
         <!-- /.col -->
         <div class="col-lg-3 col-xs-6">
-          <a href="<?php echo base_url('admin/berita/berita') ?>">
-            <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-newspaper-o" aria-hidden="true"></i></span>
-              <div class="info-box-content"> <span class="info-box-number "> Berita </span> <span class="info-box-text"><?php echo $this->db->query("select * from tbl_berita")->num_rows() ?> berita</span></div>
+          <a href="<?php echo base_url('admin/seleksi/seleksi') ?>">
+            <div class="info-box"> <span class="info-box-icon bg-red"><i class="fa fa-wpexplorer" aria-hidden="true"></i></span>
+              <div class="info-box-content"> <span class="info-box-number "> Recruitment </span> <span class="info-box-text"><?php echo $this->db->query("select * from tbl_berita")->num_rows() ?> </span></div>
               <!-- /.info-box-content -->
             </div>
             <!-- /.info-box -->

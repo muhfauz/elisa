@@ -45,7 +45,7 @@
           <ul class="treeview-menu">
             <li class="ml-4"><a href="<?php echo base_url('admin/master/admin') ?>"> <i class="fa fa-user-o mr-1"></i>Data Admin</a></li>
             <li class="ml-4"><a href="<?php echo base_url('admin/master/hrd') ?>"> <i class="fa fa-eercast mr-1"></i>Data HRD</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/master/pelamar') ?>"> <i class="fa fa fa-clone mr-1"></i>Data Pelamar</a></li>
+            <!-- <li class="ml-4"><a href="<?php echo base_url('admin/master/pelamar') ?>"> <i class="fa fa fa-clone mr-1"></i>Data Pelamar</a></li> -->
             <!-- <li class="ml-4"><a href="<?php echo base_url('admin/master/siswa') ?>"> <i class="fa fa-safari mr-1"></i>Siswa</a></li> -->
 
 
@@ -91,13 +91,7 @@
           </ul>
         </li>
 
-        <!-- <li class="treeview"> <a href="#"><i class="fa fa-buysellads mr-2" aria-hidden="true"></i><span>Penjualan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
-          <ul class="treeview-menu">
-            <li class="ml-4"><a href="<?php echo base_url('admin/transaksi/penjualan/tambahpenjualan') ?>"> <i class="fa fa-plus" aria-hidden="true"></i></i>Transaksi Baru</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/transaksi/penjualan/') ?>"> <i class="fa fa-ravelry" aria-hidden="true"></i>Data Penjualan </a></li>
 
-          </ul>
-        </li> -->
         <!-- <li class="header">Pengaturan</li> -->
         <li class="treeview"> <a href="#"> <i class="fa fa-cogs mr-2"></i><span>Pengaturan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
@@ -107,23 +101,18 @@
             <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/slider') ?>"> <i class="fa fa-image mr-1"></i>Data Slider</a></li>
             <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/gantipas') ?>"> <i class="fa fa-image mr-1"></i>Ganti Passwordr</a></li>
             <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/jadwal') ?>"> <i class="fa fa-image mr-1"></i>Jadwal</a></li>
-            <!-- <li class="ml-4"><a href="<?php echo base_url('admin/master/tahunmasuk') ?>"> <i class="fa fa-calendar mr-1" aria-hidden="true"></i>Tahun Masuk</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/master/tahunajaran') ?>"> <i class="fa fa-graduation-cap mr-1"></i>Tahun Ajaran</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/master/tingkat') ?>"> <i class="fa fa-gg mr-1"></i>Tingkat</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/master/kelas') ?>"> <i class="fa fa-xing mr-1"></i>Kelas</a></li>
-            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/spp') ?>"> <i class="fa fa-ils mr-1" aria-hidden="true"></i>SPP</a></li> -->
-            <!-- <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/pesanfaq') ?>"> <i class="fa fa-bookmark mr-1"></i>Master FAQ</a></li>
-          <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/faq') ?>"> <i class="fa fa-info mr-1"></i>FAQ</a></li>
-          <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/slider') ?>"> <i class="fa fa-meetup mr-1"></i>Slider</a></li> -->
+
+            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/tatacara') ?>"> <i class="fa fa-info mr-1"></i>FAQ</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/slider') ?>"> <i class="fa fa-meetup mr-1"></i>Slider</a></li> -->
           </ul>
         </li>
-        <li class="treeview"> <a href="#"> <i class="fa fa-file-o" aria-hidden="true"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+        <!-- <li class="treeview"> <a href="#"> <i class="fa fa-file-o" aria-hidden="true"></i> <span>Laporan</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
             <li class="ml-4"><a href="<?php echo base_url('admin/laporan/ladmin') ?>"> <i class="fa fa-user-o mr-1"></i>Laporan Data Admin</a></li>
 
 
           </ul>
-        </li>
+        </li> -->
       <?php } elseif ($this->session->userdata('posisi') == 'hrd') { ?>
         <li class="treeview"> <a href="#"> <i class="fa fa-wpexplorer mr-1" aria-hidden="true"></i> <span>Rekruitment</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
           <ul class="treeview-menu">
