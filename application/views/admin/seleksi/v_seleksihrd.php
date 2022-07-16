@@ -95,17 +95,27 @@
 
 
 
-                                <td> <span class="badge badge-primary"><?php echo 'berkas ' . $a->ket_hrd  ?></span>
+                                <td>
+                                    <?php if ($a->ket_hrd == "belum") { ?>
+                                        <button class="btn btn-sm btn-warning"> <i class="fa fa-exclamation mr-2" aria-hidden="true"></i>Silakan Cek Jawaban </button>
+
+                                    <?php } elseif ($a->ket_hrd == "tolak") { ?>
+                                        <button class="btn btn-sm btn-danger"> <i class="fa fa-close mr-2" aria-hidden="true"></i>Tidak Lolos </button>
+                                    <?php } elseif ($a->ket_hrd == "terima") { ?>
+                                        <button class="btn btn-sm btn-success"> <i class="fa fa-check mr-2" aria-hidden="true"></i>Lolos Seleksi </button>
+                                    <? } else { ?>
+
+                                    <?php } ?>
                                 </td>
                                 <td class="float-right">
                                     <?php if ($a->ket_hrd == "belum") { ?>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Detail</a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Info Pelamar</a>
                                         <a href="" class="btn btn-info btn-sm mb-1" data-toggle="modal" data-target="#terimadata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-check mr-2"></i> Terima seleksi</a>
                                         <a href="" class="btn btn-danger btn-sm mb-1" data-toggle="modal" data-target="#tolakdata<?php echo $a->kd_seleksi ?>"> <i class="fa fa-times-circle mr-2"></i> Tolak seleksi</a>
                                     <?php } elseif ($a->ket_hrd == "tolak") { ?>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Detail</a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Info Pelamar</a>
                                     <?php } elseif ($a->ket_hrd == "terima") { ?>
-                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Detail</a>
+                                        <a href="" class="btn btn-primary btn-sm mb-1" data-toggle="modal" data-target="#datadetail<?php echo $a->kd_seleksi ?>"> <i class="fa fa-info mr-2"></i> Info Pelamar</a>
                                     <? } else { ?>
 
                                     <?php } ?>
