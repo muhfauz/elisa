@@ -57,7 +57,7 @@
 
                         </li>
                         <li>
-                            <a href="#" title="About Us">Tentang Kami</a>
+                            <a href="<?php echo base_url('depan/tentang') ?>" title="About Us">Tentang Kami</a>
                         </li>
                         <li>
                             <a href="<?php echo base_url('lowongan') ?>" title="About Us">Lowongan</a>

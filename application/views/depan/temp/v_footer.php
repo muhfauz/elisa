@@ -102,20 +102,17 @@
                               <div class="textwidget">
                                   <ul class="opening-shedule">
                                       <li class="clearfix">
-                                          <span> Sat - Tues : </span>
-                                          <div class="pull-right"> 6.00 AM - 10.00 PM</div>
+                                          <span> Senin - Jum'at : </span>
+                                          <div class="pull-right"> 8.30 AM - 16.30 PM</div>
                                       </li>
                                       <li>
-                                          <span> Wed - Thurs : </span>
-                                          <div class="pull-right"> 8.00 AM - 6.00 PM</div>
+                                          <span> Sabtu : </span>
+                                          <div class="pull-right"> 8.30 AM - 15.00 PM</div>
                                       </li>
+
                                       <li>
-                                          <span> Friday :</span>
-                                          <div class="pull-right"> 6.00 AM - 10.00 PM</div>
-                                      </li>
-                                      <li>
-                                          <span> Sunday :</span>
-                                          <div class="pull-right"> Closed</div>
+                                          <span> Minggu :</span>
+                                          <div class="pull-right"> Libur</div>
                                       </li>
                                   </ul>
 
@@ -144,7 +141,7 @@
 
               <div class="row clearfix">
                   <div class="col-md-12 col-sm-12 text-center clearfix">
-                      <p class="copyright-text"> Copyright © 2017-2018. All Right Reserved - by xenioushk </p>
+                      <p class="copyright-text"> Copyright © 2022. All Right Reserved <?php echo $this->db->query("select * from tbl_judul where kd_judul='1'")->row()->judul; ?> - <?php echo $this->db->query("select * from tbl_judul where kd_judul='1'")->row()->oleh; ?></p>
                   </div>
 
               </div>
