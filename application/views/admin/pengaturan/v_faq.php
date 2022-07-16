@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header sty-one">
-        <h1 class="text-black"> <i class="fa fa-user"></i> <?php echo $x1; ?></h1>
+        <h1 class="text-black"> <i class="fa fa-info"></i> <?php echo $x1; ?></h1>
         <ol class="breadcrumb">
             <li><a href="#">Home</a></li>
             <li class="sub-bread"><i class="fa fa-angle-right"></i> <?php echo $x2; ?></li>
@@ -15,8 +15,8 @@
 
 
         <div class="info-box">
-            <h4 class="text-primary"><i class="fa fa-user"></i> <?php echo $x1; ?></h4>
-            <p>Data Table With Full Features</p>
+            <h4 class="text-primary"><i class="fa fa-info"></i> <?php echo $x1; ?></h4>
+            <p><?php echo $nama_perush; ?></p>
             <div class="table-responsive">
                 <?php echo $this->session->userdata('pesan'); ?>
                 <a href="" class="btn btn-primary mb-2" data-toggle="modal" data-target="#tambahdata"> <i class="fa fa-plus-square mr-2"></i> Tambah Data</a>

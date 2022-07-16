@@ -10,11 +10,11 @@
 
 
                 <h3>
-                    Our Services
+                    <?php echo $judul; ?>
                 </h3>
 
                 <p class="page-breadcrumb">
-                    <a href="#">Home</a> / Our Services
+                    <a href="<?php echo base_url('depan') ?>">Home</a> /<?php echo $judul; ?>
                 </p>
 
 
@@ -36,12 +36,11 @@
         <div class="row section-heading-wrapper">
 
             <div class="col-md-12 col-sm-12 text-center">
-                <h4 class="heading-alt-style text-capitalize text-dark-color">OUR PACKAGES</h4>
+                <h4 class="heading-alt-style text-capitalize text-dark-color"><?php echo $judul; ?></h4>
                 <span class="heading-separator heading-separator-horizontal"></span>
                 <h2 class="subheading-alt-style">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit curabitur eu ante non ex lobortis posuere
-                    <br />
-                    volutpat nec orci morbi facilisis massa lectus volutpat posuere volutpat.
+                    <?php echo $kalimat . ' di ' . $nama_perush; ?>
+
                 </h2>
             </div> <!-- end .col-sm-12  -->
 

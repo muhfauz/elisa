@@ -16,6 +16,7 @@ class Faq extends CI_Controller
     $data['x2'] = 'Pengaturan';
     $data['x3'] = 'Faq';
     // $data['x4']='Data Admin Sahabat Optik';
+    $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
     $data['faq'] = $this->Mglobal->tampilkandata('tbl_faq');
     $this->load->view('admin/temp/v_header', $data);
     $this->load->view('admin/temp/v_atas');

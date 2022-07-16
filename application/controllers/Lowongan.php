@@ -33,10 +33,12 @@ class Lowongan extends CI_Controller
     {
         $tglsekarang = date('Y-m-d');
         $data['lowongan'] = $this->db->query("select * from tbl_lowongan where tgl_tutup >='$tglsekarang'")->result();
+
         // $data['bidang'] = $this->Mglobal->tampilkandata('tbl_bidang');
         // $data['lowongan'] = $this->Mglobal->tampilkandata('tbl_lowongan');
-        $data['judul'] = 'Daftar Akun';
-        $data['kalimat'] = 'Isikan Identitas Pendaftar';
+        $data['judul'] = 'Lowongan Kerja';
+        $data['kalimat'] = 'Lowongan Kerja Yang Tersedia';
+        $data['nama_perush'] = $this->db->query("select nama_perush from tbl_perusahaan")->row()->nama_perush;
         $this->load->view('depan/temp/v_head', $data);
         $this->load->view('depan/temp/v_header');
         // $this->load->view('depan/temp/v_navbar');
@@ -47,7 +49,7 @@ class Lowongan extends CI_Controller
     {
         $tglsekarang = date('Y-m-d');
         $data['lowongan'] = $this->db->query("select * from tbl_lowongan where kd_lowonganen='$id'")->result();
-        // $data['bidang'] = $this->Mglobal->tampilkandata('tbl_bidang');
+        $data['faq'] = $this->Mglobal->tampilkandata('tbl_faq');
         // $data['lowongan'] = $this->Mglobal->tampilkandata('tbl_lowongan');
         $data['judul'] = 'Daftar Akun';
         $data['kalimat'] = 'Isika Identitas Pendaftar';

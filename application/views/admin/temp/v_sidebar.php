@@ -102,7 +102,7 @@
             <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/gantipas') ?>"> <i class="fa fa-image mr-1"></i>Ganti Passwordr</a></li>
             <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/jadwal') ?>"> <i class="fa fa-image mr-1"></i>Jadwal</a></li>
 
-            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/tatacara') ?>"> <i class="fa fa-info mr-1"></i>FAQ</a></li>
+            <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/faq') ?>"> <i class="fa fa-info mr-1"></i>FAQ</a></li>
             <li class="ml-4"><a href="<?php echo base_url('admin/pengaturan/slider') ?>"> <i class="fa fa-meetup mr-1"></i>Slider</a></li> -->
           </ul>
         </li>
