@@ -65,7 +65,7 @@
 
 
             <div class="col-sm-8">
-                <?php foreach ($tentang as $t) : ?>
+                <?php foreach ($sejarah as $t) : ?>
 
                     <div class="row">
 
@@ -77,17 +77,11 @@
                                 </a>
                             </div> <!--  end articles -->
 
-
-
                             <div class="single-service-content">
-
-
-                                <h2 class="block-heading-title text-capitalize"><?php echo $t->judul_tentang ?></h2>
+                                <h2 class="block-heading-title text-capitalize"><?php echo $t->judul_sejarah ?></h2>
                                 <hr />
 
-                                <?php echo $t->isi_tentang ?>
-
-
+                                <?php echo $t->isi_sejarah ?>
 
                             </div>
 

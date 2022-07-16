@@ -34,122 +34,40 @@
 
             <div class="row">
                 <div class="col-md-4 col-sm-12">
-
-
                     <div class="widget site-sidebar">
 
-                        <h2 class="widget-title">Our Packages</h2>
+                        <h2 class="widget-title">Cara Mendaftar</h2>
 
-                        <ul class="widget-service-category clearfix">
-                            <li>
-                                <a title="service details" href="#">Kid | 4-35 Month </a>
-                            </li>
-                            <li>
-                                <a title="service details" href="#">Junior | 3-4 Years </a>
-                            </li>
-                            <li>
-                                <a title="service details" href="#">Teen | 8-16 Years</a>
-                            </li>
-                            <li>
-                                <a title="service details" href="#">Pro | 16-40 Years</a>
-                            </li>
-                            <li>
-                                <a title="service details" href="#">Family | 1-50 Years</a>
-                            </li>
-                            <li>
-                                <a title="service details" href="#">Friends | 16-40 Years</a>
-                            </li>
-                        </ul>
+                        <div class="text-widget text-left">
+                            <div class="faq-layout margin-top-16" id="accordion">
+                                <?php foreach ($faq as $f) : ?>
 
-                    </div> <!--  end .widget -->
-
-                    <div class="widget site-sidebar">
-
-                        <h2 class="widget-title">Testimonials</h2>
-
-                        <div class="testimonial-container no-padding owl-carousel text-left padding-top-24" data-items="1" data-dots="false">
-
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-
-                                <div class="testimony-layout-1  no-padding transparent-bg">
-
-                                    <p class="testimony-text">
-                                        Always friendly, honest service. Comparable prices and good advice.
-                                    </p>
-
-                                    <div class="testimony-info">
-                                        <h4>Brandon Munson </h4>
-                                        <h6>CTO, Fulcrum Design</h6>
+                                    <div class="panel panel-default faq-box">
+                                        <div class="panel-heading">
+                                            <p class="panel-title">
+                                                <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><?php echo $f->tanya_faq ?></a>
+                                            </p>
+                                        </div>
+                                        <div id="collapseOne" class="panel-collapse collapse">
+                                            <div class="panel-body">
+                                                <?php echo $f->jawab_faq ?>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div> <!-- end .testimony-layout-1  -->
-
+                                <?php endforeach; ?>
                             </div>
 
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
-                                <div class="testimony-layout-1  no-padding transparent-bg">
-                                    <p class="testimony-text">
-                                        Always friendly, honest service. Comparable prices and good advice.
-                                    </p>
-                                    <div class="testimony-info">
-                                        <h4>Sunnybrook Church </h4>
-                                        <h6 class="bq-author-info">CEO, HW Tech Inc</h6>
-                                    </div>
-                                </div> <!-- end .testimony-layout-1  -->
-
-                            </div>
-
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-
-                                <div class="testimony-layout-1  no-padding transparent-bg">
-                                    <p class="testimony-text">
-                                        Always friendly, honest service. Comparable prices and good advice.
-                                    </p>
-                                    <div class="testimony-info">
-                                        <h4>Sunnybrook Church </h4>
-                                        <h6 class="bq-author-info">CEO, HW Tech Inc</h6>
-                                    </div>
-                                </div> <!-- end .testimony-layout-1  -->
-
-                            </div>
-
-                        </div> <!-- end .testimonial-container  -->
-
-                    </div> <!--  end .widget -->
-
-                    <div class="widget site-sidebar">
-
-                        <h2 class="widget-title">Our Brochure</h2>
-
-                        <div class="text-widget">
-                            Swim Easy offers professional swimming classes at our academies throughout world.
-                            The high level of customer service has allowed to open multiple swim training centers.
-                            <p>
-                                <a href="#"><img src="images/brochure.png" alt="" /></a>
-                            </p>
                         </div>
 
                     </div> <!--  end .widget -->
 
-                    <div class="widget site-sidebar">
 
-                        <h2 class="widget-title">Contact Support</h2>
 
-                        <div class="text-widget text-center">
 
-                            <p>
-                                <img src="images/support_user.jpg" alt="" class="img-circle img-thumbnail inline" />
-                                <br />
-                                <strong>John Bendonra</strong>
-                                <br />
-                                <i>Senior Trainer, Swim Easy</i>
-                                <span class="block-primary-bg text-light-color padding-all-4 margin-top-24 db text-center">
-                                    (+88)-0191-1613-458
-                                </span>
-                            </p>
-                        </div>
 
-                    </div> <!--  end .widget -->
+
+
 
                 </div> <!-- end .col-sm-4  -->
 

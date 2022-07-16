@@ -36,7 +36,7 @@
 
 <body class="hold-transition login-page">
   <div class="login-box">
-    <div class="login-box-body bg-aqua-gradient">
+    <div class="login-box-body bg-dark">
 
       <h3 class="login-box-msg">Login</h3>
       <p>

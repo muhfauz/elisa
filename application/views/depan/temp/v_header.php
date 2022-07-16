@@ -56,89 +56,26 @@
                             <a href="<?php echo base_url('depan') ?>" title="Home Layout 01">Home</a>
 
                         </li>
-                        <li>
-                            <a href="<?php echo base_url('depan/tentang') ?>" title="About Us">Tentang Kami</a>
+
+                        <li class="drop">
+                            <a href="#">Tentang Kami</a>
+                            <ul class="drop-down">
+                                <li>
+                                    <a href="<?php echo base_url('depan/tentang') ?>" title="About Us">Tentang Kami</a>
+                                </li>
+                                <li><a href="<?php echo base_url('depan/sejarah') ?>">Sejarah</a></li>
+                                <li><a href="<?php echo base_url('depan/visi') ?>">Visi dan Misi</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="<?php echo base_url('lowongan') ?>" title="About Us">Lowongan</a>
                         </li>
 
-                        <li class="drop">
-                            <a href="#">Pages</a>
-                            <ul class="drop-down">
-                                <li class="drop">
-                                    <a href="service.html" title="Services">Services</a>
-                                    <ul class="drop-down level3">
-                                        <li><a href="service-details.html">Services Details</a></li>
-                                    </ul>
-                                </li>
-                                <li class="drop">
-                                    <a href="team.html" title="Team">Our Team</a>
-                                    <ul class="drop-down level3">
-                                        <li><a href="single-team.html">Single Team</a></li>
-                                    </ul>
-                                </li>
-                                <li class="drop">
-                                    <a href="#">Gallery</a>
-                                    <ul class="drop-down level3">
-                                        <li><a href="gallery-1.html">Layout 01</a></li>
-                                        <li><a href="gallery-2.html">Layout 02</a></li>
-                                        <li><a href="gallery-3.html">Layout 03</a></li>
-                                    </ul>
-                                </li>
 
-                                <li class="drop">
-                                    <a href="#">Elements 01</a>
-                                    <ul class="drop-down level3">
 
-                                        <li><a href="element-info-box.html">Info Boxes</a></li>
-                                        <li><a href="element-feedback.html">Testimonials</a></li>
-                                        <li><a href="appointment.html" title="APPOINTMENT">APPOINTMENT</a></li>
-                                        <li><a href="faq.html" title="FAQ">FAQ</a></li>
-                                        <li><a href="coming-soon.html" title="COMING SOON">COMING SOON</a></li>
-                                        <li><a href="404.html" title="404 Page">404 Page</a></li>
-                                    </ul>
-                                </li>
 
-                                <li class="drop">
-                                    <a href="#">Elements 02</a>
-                                    <ul class="drop-down level3">
-                                        <li><a href="element-cta.html">CTA Boxes</a></li>
-                                        <li><a href="element-counter.html">Counters</a></li>
-                                        <li><a href="element-logos.html">Logos/Client</a></li>
-                                        <li><a href="element-pricing-table.html">Pricing Table</a></li>
-                                        <li><a href="element-service.html">Service Boxes</a></li>
-                                    </ul>
-                                </li>
 
-                                <li class="drop">
-                                    <a href="#">Elements 03</a>
-                                    <ul class="drop-down level3">
-                                        <li><a href="element-highlights.html">Highlights</a></li>
-                                        <li><a href="element-appointment.html">Quote Form</a></li>
-                                        <li><a href="element-team.html">Team Boxes</a></li>
-                                    </ul>
-                                </li>
-
-                                <li class="drop"><a href="#">Level 3</a>
-                                    <ul class="drop-down level3">
-                                        <li><a href="#">Level 3.1</a></li>
-                                        <li><a href="#">Level 3.2</a></li>
-                                        <li><a href="#">Level 3.3</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </li>
-
-                        <li class="drop">
-                            <a href="#">Blog</a>
-                            <ul class="drop-down">
-                                <li><a href="blog.html">All Posts</a></li>
-                                <li><a href="single.html">Single Page</a></li>
-                            </ul>
-                        </li>
-
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="<?php echo base_url('depan/hubungi') ?>">Hubungi Kami</a></li>
                         <?php if ($this->session->userdata('status') == 'login') { ?>
                             <li><a href="<?php echo base_url('welcome') ?>" class="nav-btn-highlight">Beranda</a></li>
                             <li><a href="<?php echo base_url('login/logout') ?>" class="nav-btn-highlight">LogOut</a></li>
