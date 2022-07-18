@@ -118,31 +118,31 @@
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_vaksin2 <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_vaksin2 ?>" target="_blank">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_vaksin2 ?>" target="_blank">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_swab <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_swab ?>" target="_blank">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_swab ?>" target="_blank">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_ktp <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_ktp ?>" target="_blank">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_ktp ?>" target="_blank">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_kk <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_kk ?>" target="_blank">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_kk ?>" target="_blank">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
                                 </td>
                                 <td><?php if ($a->fc_sertifikat <> "") { ?>
-                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->$a->fc_sertifikat ?>" target="_blank">
+                                        <a href="<?php echo base_url() ?>berkas/<?php echo $a->fc_sertifikat ?>" target="_blank">
                                             <button class="btn btn-sm btn-primary"> <i class="fa fa-eye mr-2" aria-hidden="true"></i>Lihat </button>
                                         </a>
                                     <?php } ?>
